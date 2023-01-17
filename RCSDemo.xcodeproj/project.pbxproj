@@ -1,0 +1,1083 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		150B3304B43E6D03ACAAFF94 /* Pods_RCSDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7001679518613075ED839AE8 /* Pods_RCSDemoTests.framework */; };
+		A2E32536BA87E337DCCF2C50 /* Pods_RCSDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9071F636CA131DB76EA103BE /* Pods_RCSDemo.framework */; };
+		A5263EFB5CD2AE6B29DDB25E /* Pods_RCSDemo_RCSDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF63249BB1F6965E2E50D135 /* Pods_RCSDemo_RCSDemoUITests.framework */; };
+		C92FFBE0295AA2A300776DF2 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = C92FFBDF295AA2A300776DF2 /* Dog.m */; };
+		C99DA833296BF4EC00F774ED /* RCSConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C99DA832296BF4EC00F774ED /* RCSConnection.m */; };
+		C9BB379829767E80006C3890 /* RCConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9BB378729767E7F006C3890 /* RCConfig.plist */; };
+		C9BB379929767E80006C3890 /* RCColor.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9BB378929767E7F006C3890 /* RCColor.plist */; };
+		C9BB379B29767E80006C3890 /* RongCloudKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9BB378B29767E80006C3890 /* RongCloudKit.strings */; };
+		C9BB379C29767E80006C3890 /* Emoji.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9BB378F29767E80006C3890 /* Emoji.plist */; };
+		C9BB379D29767E80006C3890 /* RongCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C9BB379029767E80006C3890 /* RongCloud.bundle */; };
+		C9BB379E29768042006C3890 /* RongChatRoom.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB378129767E7F006C3890 /* RongChatRoom.xcframework */; };
+		C9BB379F29768042006C3890 /* RongChatRoom.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB378129767E7F006C3890 /* RongChatRoom.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C9BB37A129768043006C3890 /* RongCustomerService.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB378029767E7F006C3890 /* RongCustomerService.xcframework */; };
+		C9BB37A229768044006C3890 /* RongCustomerService.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB378029767E7F006C3890 /* RongCustomerService.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C9BB37A329768047006C3890 /* RongDiscussion.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB378629767E7F006C3890 /* RongDiscussion.xcframework */; };
+		C9BB37A429768047006C3890 /* RongDiscussion.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB378629767E7F006C3890 /* RongDiscussion.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C9BB37A529768048006C3890 /* RongIMKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB378A29767E7F006C3890 /* RongIMKit.xcframework */; };
+		C9BB37A629768048006C3890 /* RongIMKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB378A29767E7F006C3890 /* RongIMKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C9BB37A72976804A006C3890 /* RongIMLib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB378229767E7F006C3890 /* RongIMLib.xcframework */; };
+		C9BB37A82976804A006C3890 /* RongIMLib.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB378229767E7F006C3890 /* RongIMLib.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C9BB37A92976804B006C3890 /* RongIMLibCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB378429767E7F006C3890 /* RongIMLibCore.xcframework */; };
+		C9BB37AA2976804B006C3890 /* RongIMLibCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB378429767E7F006C3890 /* RongIMLibCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C9BB37AB2976804E006C3890 /* RongTranslation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB378329767E7F006C3890 /* RongTranslation.xcframework */; };
+		C9BB37AC2976804E006C3890 /* RongTranslation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB378329767E7F006C3890 /* RongTranslation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C9BB37AD2976804F006C3890 /* RongPublicService.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB378529767E7F006C3890 /* RongPublicService.xcframework */; };
+		C9BB37AE2976804F006C3890 /* RongPublicService.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9BB378529767E7F006C3890 /* RongPublicService.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C9BB37B229768252006C3890 /* HomeNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37B129768252006C3890 /* HomeNormalCell.m */; };
+		C9BB37B529768265006C3890 /* HomeSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37B429768265006C3890 /* HomeSwitchCell.m */; };
+		C9BB37BB29768398006C3890 /* RCSHomeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37BA29768398006C3890 /* RCSHomeItem.m */; };
+		C9BB37BE2976842D006C3890 /* RCSHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37BD2976842D006C3890 /* RCSHomeViewModel.m */; };
+		C9BB37CA2976A9BD006C3890 /* RCSHomeItemChatPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37C92976A9BD006C3890 /* RCSHomeItemChatPrivate.m */; };
+		C9BB37CD2976A9C9006C3890 /* RCSHomeItemChatGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37CC2976A9C9006C3890 /* RCSHomeItemChatGroup.m */; };
+		C9BB37D02976A9DC006C3890 /* RCSHomeItemSettingQuiet.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37CF2976A9DC006C3890 /* RCSHomeItemSettingQuiet.m */; };
+		C9BB37D32976AABE006C3890 /* RCSHomeItemChat.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37D22976AABE006C3890 /* RCSHomeItemChat.m */; };
+		C9BB37D62976ABB8006C3890 /* RCSHomeItemChatRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37D52976ABB8006C3890 /* RCSHomeItemChatRoom.m */; };
+		C9D53EE0296E899600E36858 /* DemoSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D53EDF296E899600E36858 /* DemoSwift.swift */; };
+		C9D53EE5296FF22E00E36858 /* RCMessageCell+Mark.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D53EE4296FF22E00E36858 /* RCMessageCell+Mark.m */; };
+		C9F6F3CF2959A999009FAAE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F3CE2959A999009FAAE6 /* AppDelegate.m */; };
+		C9F6F3D22959A999009FAAE6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F3D12959A999009FAAE6 /* SceneDelegate.m */; };
+		C9F6F3D52959A999009FAAE6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F3D42959A999009FAAE6 /* ViewController.m */; };
+		C9F6F3D82959A999009FAAE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9F6F3D62959A999009FAAE6 /* Main.storyboard */; };
+		C9F6F3DA2959A99A009FAAE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9F6F3D92959A99A009FAAE6 /* Assets.xcassets */; };
+		C9F6F3DD2959A99A009FAAE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9F6F3DB2959A99A009FAAE6 /* LaunchScreen.storyboard */; };
+		C9F6F3E02959A99A009FAAE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F3DF2959A99A009FAAE6 /* main.m */; };
+		C9F6F3EA2959A99A009FAAE6 /* RCSDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F3E92959A99A009FAAE6 /* RCSDemoTests.m */; };
+		C9F6F3F42959A99A009FAAE6 /* RCSDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F3F32959A99A009FAAE6 /* RCSDemoUITests.m */; };
+		C9F6F3F62959A99A009FAAE6 /* RCSDemoUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F3F52959A99A009FAAE6 /* RCSDemoUITestsLaunchTests.m */; };
+		C9F6F4072959AA35009FAAE6 /* RCSSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F4042959AA35009FAAE6 /* RCSSUser.m */; };
+		C9F6F4082959AA35009FAAE6 /* Users.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9F6F4062959AA35009FAAE6 /* Users.plist */; };
+		C9F6F40D2959AB03009FAAE6 /* RCSChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F4092959AB03009FAAE6 /* RCSChatViewController.m */; };
+		C9F6F40E2959AB03009FAAE6 /* RCSConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F40A2959AB03009FAAE6 /* RCSConversationViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9F6F3E62959A99A009FAAE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9F6F3C22959A999009FAAE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9F6F3C92959A999009FAAE6;
+			remoteInfo = RCSDemo;
+		};
+		C9F6F3F02959A99A009FAAE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9F6F3C22959A999009FAAE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9F6F3C92959A999009FAAE6;
+			remoteInfo = RCSDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C9BB37A029768042006C3890 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C9BB37A629768048006C3890 /* RongIMKit.xcframework in Embed Frameworks */,
+				C9BB379F29768042006C3890 /* RongChatRoom.xcframework in Embed Frameworks */,
+				C9BB37AE2976804F006C3890 /* RongPublicService.xcframework in Embed Frameworks */,
+				C9BB37A429768047006C3890 /* RongDiscussion.xcframework in Embed Frameworks */,
+				C9BB37A229768044006C3890 /* RongCustomerService.xcframework in Embed Frameworks */,
+				C9BB37AA2976804B006C3890 /* RongIMLibCore.xcframework in Embed Frameworks */,
+				C9BB37A82976804A006C3890 /* RongIMLib.xcframework in Embed Frameworks */,
+				C9BB37AC2976804E006C3890 /* RongTranslation.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		11F4E44834EED1F17D73A1F4 /* Pods-RCSDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-RCSDemoTests/Pods-RCSDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7001679518613075ED839AE8 /* Pods_RCSDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCSDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		804D4BA0E52B144E679D9539 /* Pods-RCSDemo-RCSDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSDemo-RCSDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-RCSDemo-RCSDemoUITests/Pods-RCSDemo-RCSDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9071F636CA131DB76EA103BE /* Pods_RCSDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCSDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB6181C94D8AE501D1027C76 /* Pods-RCSDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSDemo.release.xcconfig"; path = "Target Support Files/Pods-RCSDemo/Pods-RCSDemo.release.xcconfig"; sourceTree = "<group>"; };
+		AC791E61CF2C394868AA80FC /* Pods-RCSDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSDemoTests.release.xcconfig"; path = "Target Support Files/Pods-RCSDemoTests/Pods-RCSDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		BF63249BB1F6965E2E50D135 /* Pods_RCSDemo_RCSDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCSDemo_RCSDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0C9BF08969CCD2830E0470F /* Pods-RCSDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSDemo.debug.xcconfig"; path = "Target Support Files/Pods-RCSDemo/Pods-RCSDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C92FFBDC295AA22500776DF2 /* TestsPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestsPrefix.pch; sourceTree = "<group>"; };
+		C92FFBDE295AA2A300776DF2 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		C92FFBDF295AA2A300776DF2 /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		C99DA831296BF4EC00F774ED /* RCSConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSConnection.h; sourceTree = "<group>"; };
+		C99DA832296BF4EC00F774ED /* RCSConnection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCSConnection.m; sourceTree = "<group>"; };
+		C9BB378029767E7F006C3890 /* RongCustomerService.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RongCustomerService.xcframework; sourceTree = "<group>"; };
+		C9BB378129767E7F006C3890 /* RongChatRoom.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RongChatRoom.xcframework; sourceTree = "<group>"; };
+		C9BB378229767E7F006C3890 /* RongIMLib.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RongIMLib.xcframework; sourceTree = "<group>"; };
+		C9BB378329767E7F006C3890 /* RongTranslation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RongTranslation.xcframework; sourceTree = "<group>"; };
+		C9BB378429767E7F006C3890 /* RongIMLibCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RongIMLibCore.xcframework; sourceTree = "<group>"; };
+		C9BB378529767E7F006C3890 /* RongPublicService.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RongPublicService.xcframework; sourceTree = "<group>"; };
+		C9BB378629767E7F006C3890 /* RongDiscussion.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RongDiscussion.xcframework; sourceTree = "<group>"; };
+		C9BB378729767E7F006C3890 /* RCConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RCConfig.plist; sourceTree = "<group>"; };
+		C9BB378929767E7F006C3890 /* RCColor.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RCColor.plist; sourceTree = "<group>"; };
+		C9BB378A29767E7F006C3890 /* RongIMKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RongIMKit.xcframework; sourceTree = "<group>"; };
+		C9BB378C29767E80006C3890 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/RongCloudKit.strings; sourceTree = "<group>"; };
+		C9BB378D29767E80006C3890 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/RongCloudKit.strings"; sourceTree = "<group>"; };
+		C9BB378E29767E80006C3890 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RongCloudKit.strings; sourceTree = "<group>"; };
+		C9BB378F29767E80006C3890 /* Emoji.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Emoji.plist; sourceTree = "<group>"; };
+		C9BB379029767E80006C3890 /* RongCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RongCloud.bundle; sourceTree = "<group>"; };
+		C9BB37B029768252006C3890 /* HomeNormalCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeNormalCell.h; sourceTree = "<group>"; };
+		C9BB37B129768252006C3890 /* HomeNormalCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeNormalCell.m; sourceTree = "<group>"; };
+		C9BB37B329768265006C3890 /* HomeSwitchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeSwitchCell.h; sourceTree = "<group>"; };
+		C9BB37B429768265006C3890 /* HomeSwitchCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeSwitchCell.m; sourceTree = "<group>"; };
+		C9BB37B729768336006C3890 /* RCSHomeCellProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSHomeCellProtocol.h; sourceTree = "<group>"; };
+		C9BB37B829768370006C3890 /* RCSHomeItemProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSHomeItemProtocol.h; sourceTree = "<group>"; };
+		C9BB37B929768398006C3890 /* RCSHomeItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSHomeItem.h; sourceTree = "<group>"; };
+		C9BB37BA29768398006C3890 /* RCSHomeItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCSHomeItem.m; sourceTree = "<group>"; };
+		C9BB37BC2976842D006C3890 /* RCSHomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSHomeViewModel.h; sourceTree = "<group>"; };
+		C9BB37BD2976842D006C3890 /* RCSHomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCSHomeViewModel.m; sourceTree = "<group>"; };
+		C9BB37C82976A9BD006C3890 /* RCSHomeItemChatPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSHomeItemChatPrivate.h; sourceTree = "<group>"; };
+		C9BB37C92976A9BD006C3890 /* RCSHomeItemChatPrivate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCSHomeItemChatPrivate.m; sourceTree = "<group>"; };
+		C9BB37CB2976A9C9006C3890 /* RCSHomeItemChatGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSHomeItemChatGroup.h; sourceTree = "<group>"; };
+		C9BB37CC2976A9C9006C3890 /* RCSHomeItemChatGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCSHomeItemChatGroup.m; sourceTree = "<group>"; };
+		C9BB37CE2976A9DC006C3890 /* RCSHomeItemSettingQuiet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSHomeItemSettingQuiet.h; sourceTree = "<group>"; };
+		C9BB37CF2976A9DC006C3890 /* RCSHomeItemSettingQuiet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCSHomeItemSettingQuiet.m; sourceTree = "<group>"; };
+		C9BB37D12976AABE006C3890 /* RCSHomeItemChat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSHomeItemChat.h; sourceTree = "<group>"; };
+		C9BB37D22976AABE006C3890 /* RCSHomeItemChat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCSHomeItemChat.m; sourceTree = "<group>"; };
+		C9BB37D42976ABB8006C3890 /* RCSHomeItemChatRoom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSHomeItemChatRoom.h; sourceTree = "<group>"; };
+		C9BB37D52976ABB8006C3890 /* RCSHomeItemChatRoom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCSHomeItemChatRoom.m; sourceTree = "<group>"; };
+		C9D53EDF296E899600E36858 /* DemoSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSwift.swift; sourceTree = "<group>"; };
+		C9D53EE3296FF22E00E36858 /* RCMessageCell+Mark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCMessageCell+Mark.h"; sourceTree = "<group>"; };
+		C9D53EE4296FF22E00E36858 /* RCMessageCell+Mark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCMessageCell+Mark.m"; sourceTree = "<group>"; };
+		C9F6F3CA2959A999009FAAE6 /* RCSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9F6F3CD2959A999009FAAE6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C9F6F3CE2959A999009FAAE6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C9F6F3D02959A999009FAAE6 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		C9F6F3D12959A999009FAAE6 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		C9F6F3D32959A999009FAAE6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C9F6F3D42959A999009FAAE6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C9F6F3D72959A999009FAAE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9F6F3D92959A99A009FAAE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9F6F3DC2959A99A009FAAE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9F6F3DE2959A99A009FAAE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9F6F3DF2959A99A009FAAE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C9F6F3E52959A99A009FAAE6 /* RCSDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCSDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9F6F3E92959A99A009FAAE6 /* RCSDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCSDemoTests.m; sourceTree = "<group>"; };
+		C9F6F3EF2959A99A009FAAE6 /* RCSDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCSDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9F6F3F32959A99A009FAAE6 /* RCSDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCSDemoUITests.m; sourceTree = "<group>"; };
+		C9F6F3F52959A99A009FAAE6 /* RCSDemoUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCSDemoUITestsLaunchTests.m; sourceTree = "<group>"; };
+		C9F6F4022959A9E3009FAAE6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C9F6F4032959AA35009FAAE6 /* RCSSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSSUser.h; sourceTree = "<group>"; };
+		C9F6F4042959AA35009FAAE6 /* RCSSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSSUser.m; sourceTree = "<group>"; };
+		C9F6F4062959AA35009FAAE6 /* Users.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Users.plist; sourceTree = "<group>"; };
+		C9F6F4092959AB03009FAAE6 /* RCSChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSChatViewController.m; sourceTree = "<group>"; };
+		C9F6F40A2959AB03009FAAE6 /* RCSConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSConversationViewController.m; sourceTree = "<group>"; };
+		C9F6F40B2959AB03009FAAE6 /* RCSConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSConversationViewController.h; sourceTree = "<group>"; };
+		C9F6F40C2959AB03009FAAE6 /* RCSChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSChatViewController.h; sourceTree = "<group>"; };
+		CDB3582CE661A95566E753DF /* Pods-RCSDemo-RCSDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSDemo-RCSDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-RCSDemo-RCSDemoUITests/Pods-RCSDemo-RCSDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9F6F3C72959A999009FAAE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2E32536BA87E337DCCF2C50 /* Pods_RCSDemo.framework in Frameworks */,
+				C9BB37A92976804B006C3890 /* RongIMLibCore.xcframework in Frameworks */,
+				C9BB37AD2976804F006C3890 /* RongPublicService.xcframework in Frameworks */,
+				C9BB37A129768043006C3890 /* RongCustomerService.xcframework in Frameworks */,
+				C9BB37A329768047006C3890 /* RongDiscussion.xcframework in Frameworks */,
+				C9BB37A72976804A006C3890 /* RongIMLib.xcframework in Frameworks */,
+				C9BB37AB2976804E006C3890 /* RongTranslation.xcframework in Frameworks */,
+				C9BB37A529768048006C3890 /* RongIMKit.xcframework in Frameworks */,
+				C9BB379E29768042006C3890 /* RongChatRoom.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9F6F3E22959A99A009FAAE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				150B3304B43E6D03ACAAFF94 /* Pods_RCSDemoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9F6F3EC2959A99A009FAAE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5263EFB5CD2AE6B29DDB25E /* Pods_RCSDemo_RCSDemoUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18CDB77A85A2D4790E421F0B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0C9BF08969CCD2830E0470F /* Pods-RCSDemo.debug.xcconfig */,
+				AB6181C94D8AE501D1027C76 /* Pods-RCSDemo.release.xcconfig */,
+				804D4BA0E52B144E679D9539 /* Pods-RCSDemo-RCSDemoUITests.debug.xcconfig */,
+				CDB3582CE661A95566E753DF /* Pods-RCSDemo-RCSDemoUITests.release.xcconfig */,
+				11F4E44834EED1F17D73A1F4 /* Pods-RCSDemoTests.debug.xcconfig */,
+				AC791E61CF2C394868AA80FC /* Pods-RCSDemoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2DF142DC4C4293563707CB2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9071F636CA131DB76EA103BE /* Pods_RCSDemo.framework */,
+				BF63249BB1F6965E2E50D135 /* Pods_RCSDemo_RCSDemoUITests.framework */,
+				7001679518613075ED839AE8 /* Pods_RCSDemoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C92FFBDD295AA29800776DF2 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				C92FFBDE295AA2A300776DF2 /* Dog.h */,
+				C92FFBDF295AA2A300776DF2 /* Dog.m */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
+		C99DA828296BF42000F774ED /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				C99DA82D296BF45200F774ED /* User */,
+				C99DA82B296BF43A00F774ED /* Chat */,
+				C99DA829296BF42800F774ED /* Home */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		C99DA829296BF42800F774ED /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C9BB37B62976831F006C3890 /* Model */,
+				C9BB37AF2976823C006C3890 /* View */,
+				C99DA830296BF4A500F774ED /* ViewModel */,
+				C99DA82A296BF42D00F774ED /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C99DA82A296BF42D00F774ED /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C9F6F3D32959A999009FAAE6 /* ViewController.h */,
+				C9F6F3D42959A999009FAAE6 /* ViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C99DA82B296BF43A00F774ED /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				C9D53EE6296FF23400E36858 /* View */,
+				C99DA82C296BF44000F774ED /* ViewController */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		C99DA82C296BF44000F774ED /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C9F6F40C2959AB03009FAAE6 /* RCSChatViewController.h */,
+				C9F6F4092959AB03009FAAE6 /* RCSChatViewController.m */,
+				C9F6F40B2959AB03009FAAE6 /* RCSConversationViewController.h */,
+				C9F6F40A2959AB03009FAAE6 /* RCSConversationViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C99DA82D296BF45200F774ED /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C99DA82E296BF45800F774ED /* Model */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		C99DA82E296BF45800F774ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9F6F4032959AA35009FAAE6 /* RCSSUser.h */,
+				C9F6F4042959AA35009FAAE6 /* RCSSUser.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C99DA82F296BF46C00F774ED /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				C9F6F3CD2959A999009FAAE6 /* AppDelegate.h */,
+				C9F6F3CE2959A999009FAAE6 /* AppDelegate.m */,
+				C9F6F3D02959A999009FAAE6 /* SceneDelegate.h */,
+				C9F6F3D12959A999009FAAE6 /* SceneDelegate.m */,
+				C9D53EDF296E899600E36858 /* DemoSwift.swift */,
+			);
+			path = Entry;
+			sourceTree = "<group>";
+		};
+		C99DA830296BF4A500F774ED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C99DA831296BF4EC00F774ED /* RCSConnection.h */,
+				C99DA832296BF4EC00F774ED /* RCSConnection.m */,
+				C9BB37BC2976842D006C3890 /* RCSHomeViewModel.h */,
+				C9BB37BD2976842D006C3890 /* RCSHomeViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C9BB377E29767E7F006C3890 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9BB377F29767E7F006C3890 /* IMLib */,
+				C9BB378829767E7F006C3890 /* IMKit */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9BB377F29767E7F006C3890 /* IMLib */ = {
+			isa = PBXGroup;
+			children = (
+				C9BB378029767E7F006C3890 /* RongCustomerService.xcframework */,
+				C9BB378129767E7F006C3890 /* RongChatRoom.xcframework */,
+				C9BB378229767E7F006C3890 /* RongIMLib.xcframework */,
+				C9BB378329767E7F006C3890 /* RongTranslation.xcframework */,
+				C9BB378429767E7F006C3890 /* RongIMLibCore.xcframework */,
+				C9BB378529767E7F006C3890 /* RongPublicService.xcframework */,
+				C9BB378629767E7F006C3890 /* RongDiscussion.xcframework */,
+				C9BB378729767E7F006C3890 /* RCConfig.plist */,
+			);
+			path = IMLib;
+			sourceTree = "<group>";
+		};
+		C9BB378829767E7F006C3890 /* IMKit */ = {
+			isa = PBXGroup;
+			children = (
+				C9BB378929767E7F006C3890 /* RCColor.plist */,
+				C9BB378A29767E7F006C3890 /* RongIMKit.xcframework */,
+				C9BB378B29767E80006C3890 /* RongCloudKit.strings */,
+				C9BB378F29767E80006C3890 /* Emoji.plist */,
+				C9BB379029767E80006C3890 /* RongCloud.bundle */,
+			);
+			path = IMKit;
+			sourceTree = "<group>";
+		};
+		C9BB37AF2976823C006C3890 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9BB37B029768252006C3890 /* HomeNormalCell.h */,
+				C9BB37B129768252006C3890 /* HomeNormalCell.m */,
+				C9BB37B329768265006C3890 /* HomeSwitchCell.h */,
+				C9BB37B429768265006C3890 /* HomeSwitchCell.m */,
+				C9BB37B729768336006C3890 /* RCSHomeCellProtocol.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C9BB37B62976831F006C3890 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9BB37B829768370006C3890 /* RCSHomeItemProtocol.h */,
+				C9BB37B929768398006C3890 /* RCSHomeItem.h */,
+				C9BB37BA29768398006C3890 /* RCSHomeItem.m */,
+				C9BB37D12976AABE006C3890 /* RCSHomeItemChat.h */,
+				C9BB37D22976AABE006C3890 /* RCSHomeItemChat.m */,
+				C9BB37C82976A9BD006C3890 /* RCSHomeItemChatPrivate.h */,
+				C9BB37C92976A9BD006C3890 /* RCSHomeItemChatPrivate.m */,
+				C9BB37CB2976A9C9006C3890 /* RCSHomeItemChatGroup.h */,
+				C9BB37CC2976A9C9006C3890 /* RCSHomeItemChatGroup.m */,
+				C9BB37D42976ABB8006C3890 /* RCSHomeItemChatRoom.h */,
+				C9BB37D52976ABB8006C3890 /* RCSHomeItemChatRoom.m */,
+				C9BB37CE2976A9DC006C3890 /* RCSHomeItemSettingQuiet.h */,
+				C9BB37CF2976A9DC006C3890 /* RCSHomeItemSettingQuiet.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C9D53EE6296FF23400E36858 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9D53EE3296FF22E00E36858 /* RCMessageCell+Mark.h */,
+				C9D53EE4296FF22E00E36858 /* RCMessageCell+Mark.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C9F6F3C12959A999009FAAE6 = {
+			isa = PBXGroup;
+			children = (
+				C9F6F3CC2959A999009FAAE6 /* RCSDemo */,
+				C9F6F3E82959A99A009FAAE6 /* RCSDemoTests */,
+				C9F6F3F22959A99A009FAAE6 /* RCSDemoUITests */,
+				C9F6F3CB2959A999009FAAE6 /* Products */,
+				18CDB77A85A2D4790E421F0B /* Pods */,
+				2DF142DC4C4293563707CB2A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C9F6F3CB2959A999009FAAE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9F6F3CA2959A999009FAAE6 /* RCSDemo.app */,
+				C9F6F3E52959A99A009FAAE6 /* RCSDemoTests.xctest */,
+				C9F6F3EF2959A99A009FAAE6 /* RCSDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9F6F3CC2959A999009FAAE6 /* RCSDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C9BB377E29767E7F006C3890 /* Frameworks */,
+				C99DA82F296BF46C00F774ED /* Entry */,
+				C99DA828296BF42000F774ED /* Feature */,
+				C9F6F4052959AA35009FAAE6 /* Resources */,
+				C9F6F40F2959AB3E009FAAE6 /* Storyboard */,
+				C9F6F3DE2959A99A009FAAE6 /* Info.plist */,
+				C9F6F3DF2959A99A009FAAE6 /* main.m */,
+			);
+			path = RCSDemo;
+			sourceTree = "<group>";
+		};
+		C9F6F3E82959A99A009FAAE6 /* RCSDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				C92FFBDD295AA29800776DF2 /* Sample */,
+				C9F6F3E92959A99A009FAAE6 /* RCSDemoTests.m */,
+				C92FFBDC295AA22500776DF2 /* TestsPrefix.pch */,
+			);
+			path = RCSDemoTests;
+			sourceTree = "<group>";
+		};
+		C9F6F3F22959A99A009FAAE6 /* RCSDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C9F6F3F32959A99A009FAAE6 /* RCSDemoUITests.m */,
+				C9F6F3F52959A99A009FAAE6 /* RCSDemoUITestsLaunchTests.m */,
+			);
+			path = RCSDemoUITests;
+			sourceTree = "<group>";
+		};
+		C9F6F4052959AA35009FAAE6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C9F6F4022959A9E3009FAAE6 /* PrefixHeader.pch */,
+				C9F6F3D92959A99A009FAAE6 /* Assets.xcassets */,
+				C9F6F4062959AA35009FAAE6 /* Users.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C9F6F40F2959AB3E009FAAE6 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C9F6F3DB2959A99A009FAAE6 /* LaunchScreen.storyboard */,
+				C9F6F3D62959A999009FAAE6 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9F6F3C92959A999009FAAE6 /* RCSDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9F6F3F92959A99A009FAAE6 /* Build configuration list for PBXNativeTarget "RCSDemo" */;
+			buildPhases = (
+				16B9F85E59B802AAD42B72F3 /* [CP] Check Pods Manifest.lock */,
+				C9F6F3C62959A999009FAAE6 /* Sources */,
+				C9F6F3C72959A999009FAAE6 /* Frameworks */,
+				C9F6F3C82959A999009FAAE6 /* Resources */,
+				C9BB37A029768042006C3890 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RCSDemo;
+			productName = RCSDemo;
+			productReference = C9F6F3CA2959A999009FAAE6 /* RCSDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9F6F3E42959A99A009FAAE6 /* RCSDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9F6F3FC2959A99A009FAAE6 /* Build configuration list for PBXNativeTarget "RCSDemoTests" */;
+			buildPhases = (
+				DE9B9604828C3552464876F3 /* [CP] Check Pods Manifest.lock */,
+				C9F6F3E12959A99A009FAAE6 /* Sources */,
+				C9F6F3E22959A99A009FAAE6 /* Frameworks */,
+				C9F6F3E32959A99A009FAAE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9F6F3E72959A99A009FAAE6 /* PBXTargetDependency */,
+			);
+			name = RCSDemoTests;
+			productName = RCSDemoTests;
+			productReference = C9F6F3E52959A99A009FAAE6 /* RCSDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C9F6F3EE2959A99A009FAAE6 /* RCSDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9F6F3FF2959A99A009FAAE6 /* Build configuration list for PBXNativeTarget "RCSDemoUITests" */;
+			buildPhases = (
+				5D50AE757EC3548BDA310263 /* [CP] Check Pods Manifest.lock */,
+				C9F6F3EB2959A99A009FAAE6 /* Sources */,
+				C9F6F3EC2959A99A009FAAE6 /* Frameworks */,
+				C9F6F3ED2959A99A009FAAE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9F6F3F12959A99A009FAAE6 /* PBXTargetDependency */,
+			);
+			name = RCSDemoUITests;
+			productName = RCSDemoUITests;
+			productReference = C9F6F3EF2959A99A009FAAE6 /* RCSDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9F6F3C22959A999009FAAE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					C9F6F3C92959A999009FAAE6 = {
+						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
+					};
+					C9F6F3E42959A99A009FAAE6 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = C9F6F3C92959A999009FAAE6;
+					};
+					C9F6F3EE2959A99A009FAAE6 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = C9F6F3C92959A999009FAAE6;
+					};
+				};
+			};
+			buildConfigurationList = C9F6F3C52959A999009FAAE6 /* Build configuration list for PBXProject "RCSDemo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ar,
+				"zh-Hans",
+			);
+			mainGroup = C9F6F3C12959A999009FAAE6;
+			productRefGroup = C9F6F3CB2959A999009FAAE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9F6F3C92959A999009FAAE6 /* RCSDemo */,
+				C9F6F3E42959A99A009FAAE6 /* RCSDemoTests */,
+				C9F6F3EE2959A99A009FAAE6 /* RCSDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9F6F3C82959A999009FAAE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9BB379829767E80006C3890 /* RCConfig.plist in Resources */,
+				C9BB379C29767E80006C3890 /* Emoji.plist in Resources */,
+				C9BB379D29767E80006C3890 /* RongCloud.bundle in Resources */,
+				C9BB379929767E80006C3890 /* RCColor.plist in Resources */,
+				C9BB379B29767E80006C3890 /* RongCloudKit.strings in Resources */,
+				C9F6F3DD2959A99A009FAAE6 /* LaunchScreen.storyboard in Resources */,
+				C9F6F3DA2959A99A009FAAE6 /* Assets.xcassets in Resources */,
+				C9F6F3D82959A999009FAAE6 /* Main.storyboard in Resources */,
+				C9F6F4082959AA35009FAAE6 /* Users.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9F6F3E32959A99A009FAAE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9F6F3ED2959A99A009FAAE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16B9F85E59B802AAD42B72F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RCSDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D50AE757EC3548BDA310263 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RCSDemo-RCSDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE9B9604828C3552464876F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RCSDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9F6F3C62959A999009FAAE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9F6F40E2959AB03009FAAE6 /* RCSConversationViewController.m in Sources */,
+				C9F6F3D52959A999009FAAE6 /* ViewController.m in Sources */,
+				C9D53EE0296E899600E36858 /* DemoSwift.swift in Sources */,
+				C99DA833296BF4EC00F774ED /* RCSConnection.m in Sources */,
+				C9F6F40D2959AB03009FAAE6 /* RCSChatViewController.m in Sources */,
+				C9BB37D02976A9DC006C3890 /* RCSHomeItemSettingQuiet.m in Sources */,
+				C9BB37D62976ABB8006C3890 /* RCSHomeItemChatRoom.m in Sources */,
+				C9D53EE5296FF22E00E36858 /* RCMessageCell+Mark.m in Sources */,
+				C9BB37B529768265006C3890 /* HomeSwitchCell.m in Sources */,
+				C9BB37BB29768398006C3890 /* RCSHomeItem.m in Sources */,
+				C9F6F4072959AA35009FAAE6 /* RCSSUser.m in Sources */,
+				C9BB37B229768252006C3890 /* HomeNormalCell.m in Sources */,
+				C9BB37BE2976842D006C3890 /* RCSHomeViewModel.m in Sources */,
+				C9BB37D32976AABE006C3890 /* RCSHomeItemChat.m in Sources */,
+				C9F6F3CF2959A999009FAAE6 /* AppDelegate.m in Sources */,
+				C9F6F3E02959A99A009FAAE6 /* main.m in Sources */,
+				C9BB37CA2976A9BD006C3890 /* RCSHomeItemChatPrivate.m in Sources */,
+				C9F6F3D22959A999009FAAE6 /* SceneDelegate.m in Sources */,
+				C9BB37CD2976A9C9006C3890 /* RCSHomeItemChatGroup.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9F6F3E12959A99A009FAAE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C92FFBE0295AA2A300776DF2 /* Dog.m in Sources */,
+				C9F6F3EA2959A99A009FAAE6 /* RCSDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9F6F3EB2959A99A009FAAE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9F6F3F62959A99A009FAAE6 /* RCSDemoUITestsLaunchTests.m in Sources */,
+				C9F6F3F42959A99A009FAAE6 /* RCSDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9F6F3E72959A99A009FAAE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9F6F3C92959A999009FAAE6 /* RCSDemo */;
+			targetProxy = C9F6F3E62959A99A009FAAE6 /* PBXContainerItemProxy */;
+		};
+		C9F6F3F12959A99A009FAAE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9F6F3C92959A999009FAAE6 /* RCSDemo */;
+			targetProxy = C9F6F3F02959A99A009FAAE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C9BB378B29767E80006C3890 /* RongCloudKit.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9BB378C29767E80006C3890 /* ar */,
+				C9BB378D29767E80006C3890 /* zh-Hans */,
+				C9BB378E29767E80006C3890 /* en */,
+			);
+			name = RongCloudKit.strings;
+			sourceTree = "<group>";
+		};
+		C9F6F3D62959A999009FAAE6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9F6F3D72959A999009FAAE6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C9F6F3DB2959A99A009FAAE6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9F6F3DC2959A99A009FAAE6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9F6F3F72959A99A009FAAE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C9F6F3F82959A99A009FAAE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9F6F3FA2959A99A009FAAE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0C9BF08969CCD2830E0470F /* Pods-RCSDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9CVMN4UZK4;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RCSDemo/Resources/PrefixHeader.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RCSDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.rongcloud.RCSDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C9F6F3FB2959A99A009FAAE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB6181C94D8AE501D1027C76 /* Pods-RCSDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9CVMN4UZK4;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RCSDemo/Resources/PrefixHeader.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RCSDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.rongcloud.RCSDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C9F6F3FD2959A99A009FAAE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11F4E44834EED1F17D73A1F4 /* Pods-RCSDemoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RCSDemoTests/TestsPrefix.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.rongcloud.RCSDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RCSDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RCSDemo";
+			};
+			name = Debug;
+		};
+		C9F6F3FE2959A99A009FAAE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC791E61CF2C394868AA80FC /* Pods-RCSDemoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RCSDemoTests/TestsPrefix.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.rongcloud.RCSDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RCSDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RCSDemo";
+			};
+			name = Release;
+		};
+		C9F6F4002959A99A009FAAE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 804D4BA0E52B144E679D9539 /* Pods-RCSDemo-RCSDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.rongcloud.RCSDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RCSDemo;
+			};
+			name = Debug;
+		};
+		C9F6F4012959A99A009FAAE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDB3582CE661A95566E753DF /* Pods-RCSDemo-RCSDemoUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.rongcloud.RCSDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RCSDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9F6F3C52959A999009FAAE6 /* Build configuration list for PBXProject "RCSDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9F6F3F72959A99A009FAAE6 /* Debug */,
+				C9F6F3F82959A99A009FAAE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9F6F3F92959A99A009FAAE6 /* Build configuration list for PBXNativeTarget "RCSDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9F6F3FA2959A99A009FAAE6 /* Debug */,
+				C9F6F3FB2959A99A009FAAE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9F6F3FC2959A99A009FAAE6 /* Build configuration list for PBXNativeTarget "RCSDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9F6F3FD2959A99A009FAAE6 /* Debug */,
+				C9F6F3FE2959A99A009FAAE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9F6F3FF2959A99A009FAAE6 /* Build configuration list for PBXNativeTarget "RCSDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9F6F4002959A99A009FAAE6 /* Debug */,
+				C9F6F4012959A99A009FAAE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9F6F3C22959A999009FAAE6 /* Project object */;
+}

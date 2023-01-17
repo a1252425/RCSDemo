@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>identifier</key>
+			<string>tree</string>
+			<key>name</key>
+			<string>tree</string>
+			<key>portrait</key>
+			<string></string>
+			<key>token</key>
+			<string>3a68jnE4UAGJpol6UzBsiQyP5EoGX8i5YvYndmjjLZE=@49dh.cn.rongnav.com;49dh.cn.rongcfg.com</string>
+		</dict>
+		<dict>
+			<key>identifier</key>
+			<string>as</string>
+			<key>name</key>
+			<string>as</string>
+			<key>portrait</key>
+			<string></string>
+			<key>token</key>
+			<string>M+yKa7LWtjok1mFetM+d//ENTYju3lPQ@49dh.cn.rongnav.com;49dh.cn.rongcfg.com</string>
+		</dict>
+	</array>
+</dict>
+</plist>
