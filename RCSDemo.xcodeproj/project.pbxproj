@@ -21,11 +21,12 @@
 		C9BB37D02976A9DC006C3890 /* RCSHomeItemSettingQuiet.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37CF2976A9DC006C3890 /* RCSHomeItemSettingQuiet.m */; };
 		C9BB37D32976AABE006C3890 /* RCSHomeItemChat.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37D22976AABE006C3890 /* RCSHomeItemChat.m */; };
 		C9BB37D62976ABB8006C3890 /* RCSHomeItemChatRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37D52976ABB8006C3890 /* RCSHomeItemChatRoom.m */; };
+		C9BB37D92976B306006C3890 /* HomeViewController+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37D82976B306006C3890 /* HomeViewController+Login.m */; };
 		C9D53EE0296E899600E36858 /* DemoSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D53EDF296E899600E36858 /* DemoSwift.swift */; };
 		C9D53EE5296FF22E00E36858 /* RCMessageCell+Mark.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D53EE4296FF22E00E36858 /* RCMessageCell+Mark.m */; };
 		C9F6F3CF2959A999009FAAE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F3CE2959A999009FAAE6 /* AppDelegate.m */; };
 		C9F6F3D22959A999009FAAE6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F3D12959A999009FAAE6 /* SceneDelegate.m */; };
-		C9F6F3D52959A999009FAAE6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F3D42959A999009FAAE6 /* ViewController.m */; };
+		C9F6F3D52959A999009FAAE6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F3D42959A999009FAAE6 /* HomeViewController.m */; };
 		C9F6F3D82959A999009FAAE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9F6F3D62959A999009FAAE6 /* Main.storyboard */; };
 		C9F6F3DA2959A99A009FAAE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9F6F3D92959A99A009FAAE6 /* Assets.xcassets */; };
 		C9F6F3DD2959A99A009FAAE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9F6F3DB2959A99A009FAAE6 /* LaunchScreen.storyboard */; };
@@ -88,7 +89,6 @@
 		C9BB37B329768265006C3890 /* HomeSwitchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeSwitchCell.h; sourceTree = "<group>"; };
 		C9BB37B429768265006C3890 /* HomeSwitchCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeSwitchCell.m; sourceTree = "<group>"; };
 		C9BB37B729768336006C3890 /* RCSHomeCellProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSHomeCellProtocol.h; sourceTree = "<group>"; };
-		C9BB37B829768370006C3890 /* RCSHomeItemProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSHomeItemProtocol.h; sourceTree = "<group>"; };
 		C9BB37B929768398006C3890 /* RCSHomeItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSHomeItem.h; sourceTree = "<group>"; };
 		C9BB37BA29768398006C3890 /* RCSHomeItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCSHomeItem.m; sourceTree = "<group>"; };
 		C9BB37BC2976842D006C3890 /* RCSHomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSHomeViewModel.h; sourceTree = "<group>"; };
@@ -103,6 +103,9 @@
 		C9BB37D22976AABE006C3890 /* RCSHomeItemChat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCSHomeItemChat.m; sourceTree = "<group>"; };
 		C9BB37D42976ABB8006C3890 /* RCSHomeItemChatRoom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSHomeItemChatRoom.h; sourceTree = "<group>"; };
 		C9BB37D52976ABB8006C3890 /* RCSHomeItemChatRoom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCSHomeItemChatRoom.m; sourceTree = "<group>"; };
+		C9BB37D72976B306006C3890 /* HomeViewController+Login.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HomeViewController+Login.h"; sourceTree = "<group>"; };
+		C9BB37D82976B306006C3890 /* HomeViewController+Login.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HomeViewController+Login.m"; sourceTree = "<group>"; };
+		C9BB37DB2976B457006C3890 /* RCSProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSProtocol.h; sourceTree = "<group>"; };
 		C9D53EDF296E899600E36858 /* DemoSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSwift.swift; sourceTree = "<group>"; };
 		C9D53EE3296FF22E00E36858 /* RCMessageCell+Mark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCMessageCell+Mark.h"; sourceTree = "<group>"; };
 		C9D53EE4296FF22E00E36858 /* RCMessageCell+Mark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCMessageCell+Mark.m"; sourceTree = "<group>"; };
@@ -111,8 +114,8 @@
 		C9F6F3CE2959A999009FAAE6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C9F6F3D02959A999009FAAE6 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		C9F6F3D12959A999009FAAE6 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		C9F6F3D32959A999009FAAE6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C9F6F3D42959A999009FAAE6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C9F6F3D32959A999009FAAE6 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		C9F6F3D42959A999009FAAE6 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C9F6F3D72959A999009FAAE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9F6F3D92959A99A009FAAE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9F6F3DC2959A99A009FAAE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -218,8 +221,10 @@
 		C99DA82A296BF42D00F774ED /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C9F6F3D32959A999009FAAE6 /* ViewController.h */,
-				C9F6F3D42959A999009FAAE6 /* ViewController.m */,
+				C9F6F3D32959A999009FAAE6 /* HomeViewController.h */,
+				C9F6F3D42959A999009FAAE6 /* HomeViewController.m */,
+				C9BB37D72976B306006C3890 /* HomeViewController+Login.h */,
+				C9BB37D82976B306006C3890 /* HomeViewController+Login.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -287,11 +292,11 @@
 		C9BB37AF2976823C006C3890 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C9BB37B729768336006C3890 /* RCSHomeCellProtocol.h */,
 				C9BB37B029768252006C3890 /* HomeNormalCell.h */,
 				C9BB37B129768252006C3890 /* HomeNormalCell.m */,
 				C9BB37B329768265006C3890 /* HomeSwitchCell.h */,
 				C9BB37B429768265006C3890 /* HomeSwitchCell.m */,
-				C9BB37B729768336006C3890 /* RCSHomeCellProtocol.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -299,7 +304,6 @@
 		C9BB37B62976831F006C3890 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C9BB37B829768370006C3890 /* RCSHomeItemProtocol.h */,
 				C9BB37B929768398006C3890 /* RCSHomeItem.h */,
 				C9BB37BA29768398006C3890 /* RCSHomeItem.m */,
 				C9BB37D12976AABE006C3890 /* RCSHomeItemChat.h */,
@@ -314,6 +318,14 @@
 				C9BB37CF2976A9DC006C3890 /* RCSHomeItemSettingQuiet.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C9BB37DA2976B447006C3890 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C9BB37DB2976B457006C3890 /* RCSProtocol.h */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		C9D53EE6296FF23400E36858 /* View */ = {
@@ -350,6 +362,7 @@
 		C9F6F3CC2959A999009FAAE6 /* RCSDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C9BB37DA2976B447006C3890 /* Base */,
 				C99DA82F296BF46C00F774ED /* Entry */,
 				C99DA828296BF42000F774ED /* Feature */,
 				C9F6F4052959AA35009FAAE6 /* Resources */,
@@ -678,7 +691,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9F6F40E2959AB03009FAAE6 /* RCSConversationViewController.m in Sources */,
-				C9F6F3D52959A999009FAAE6 /* ViewController.m in Sources */,
+				C9BB37D92976B306006C3890 /* HomeViewController+Login.m in Sources */,
+				C9F6F3D52959A999009FAAE6 /* HomeViewController.m in Sources */,
 				C9D53EE0296E899600E36858 /* DemoSwift.swift in Sources */,
 				C99DA833296BF4EC00F774ED /* RCSConnection.m in Sources */,
 				C9F6F40D2959AB03009FAAE6 /* RCSChatViewController.m in Sources */,

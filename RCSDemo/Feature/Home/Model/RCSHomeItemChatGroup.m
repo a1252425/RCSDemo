@@ -9,7 +9,7 @@
 #import "RCSHomeItemChatGroup.h"
 #import "RCSConversationViewController.h"
 
-@interface RCSHomeItemChatGroup () <RCSHomeItemProtocol>
+@interface RCSHomeItemChatGroup () <RCSHomeItem>
 
 @end
 

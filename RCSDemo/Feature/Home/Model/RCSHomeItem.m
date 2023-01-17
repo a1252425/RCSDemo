@@ -25,7 +25,7 @@
 }
 
 - (void)registerClass:(Class)itemClass {
-    if ([itemClass conformsToProtocol:@protocol(RCSHomeItemProtocol)])
+    if ([itemClass conformsToProtocol:@protocol(RCSHomeItem)])
         [self.itemSets addObject:itemClass];
 }
 
@@ -35,8 +35,8 @@
 
 - (NSArray<Class> *)classes {
     return [[self.itemSets allObjects] sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
-        Class<RCSHomeItemProtocol> item1 = obj1;
-        Class<RCSHomeItemProtocol> item2 = obj2;
+        Class<RCSHomeItem> item1 = obj1;
+        Class<RCSHomeItem> item2 = obj2;
         return [item1 index] < [item2 index] ? NSOrderedAscending : NSOrderedDescending;
     }];
 }

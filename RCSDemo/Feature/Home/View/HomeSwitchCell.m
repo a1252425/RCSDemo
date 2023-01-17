@@ -7,11 +7,11 @@
 
 #import "HomeSwitchCell.h"
 
-#import "RCSHomeItemProtocol.h"
+#import "RCSHomeItem.h"
 
 @interface HomeSwitchCell ()
 
-@property (nonatomic, weak) id<RCSHomeItemProtocol> item;
+@property (nonatomic, weak) id<RCSHomeItem> item;
 
 @end
 
@@ -28,7 +28,7 @@
     // Configure the view for the selected state
 }
 
-- (UITableViewCell *)update:(id<RCSHomeItemProtocol>)item {
+- (UITableViewCell *)update:(id<RCSHomeItem>)item {
     self.titleLabel.text = [item title];
     BOOL isOn = [(NSNumber *)[item storageValue] boolValue];
     [self.switchButton setOn:isOn animated:NO];

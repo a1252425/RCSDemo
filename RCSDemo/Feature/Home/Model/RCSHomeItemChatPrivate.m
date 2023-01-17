@@ -9,14 +9,14 @@
 #import "RCSConversationViewController.h"
 #import "RCSHomeItemChatPrivate.h"
 
-@interface RCSHomeItemChatPrivate () <RCSHomeItemProtocol>
+@interface RCSHomeItemChatPrivate () <RCSHomeItem>
 
 @end
 
 @implementation RCSHomeItemChatPrivate
 
 + (void)load {
-//    [[RCSHomeItem shared] registerClass:[self class]];
+    [[RCSHomeItem shared] registerClass:[self class]];
 }
 
 + (NSInteger)index {

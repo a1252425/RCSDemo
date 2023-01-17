@@ -9,7 +9,7 @@
 
 #import "RCSHomeItem.h"
 
-@interface RCSHomeItemSettingQuiet () <RCSHomeItemProtocol>
+@interface RCSHomeItemSettingQuiet () <RCSHomeItem>
 
 @property (nonatomic, copy, nullable) NSString *storageKey;
 

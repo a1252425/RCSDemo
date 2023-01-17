@@ -24,6 +24,26 @@
 			<key>token</key>
 			<string>M+yKa7LWtjok1mFetM+d//ENTYju3lPQ@49dh.cn.rongnav.com;49dh.cn.rongcfg.com</string>
 		</dict>
+		<dict>
+			<key>identifier</key>
+			<string>dds</string>
+			<key>name</key>
+			<string>dds</string>
+			<key>portrait</key>
+			<string></string>
+			<key>token</key>
+			<string>oszNozzCQRdQU8V+82RSYXD/bpbKOIq6cDaC+fz2Wl4=@49dh.cn.rongnav.com;49dh.cn.rongcfg.com</string>
+		</dict>
+		<dict>
+			<key>identifier</key>
+			<string>cat</string>
+			<key>name</key>
+			<string>cat</string>
+			<key>portrait</key>
+			<string></string>
+			<key>token</key>
+			<string>4+oBDfgXoeBQU8V+82RSYU1dn1FMU4LQcDaC+fz2Wl4=@49dh.cn.rongnav.com;49dh.cn.rongcfg.com</string>
+		</dict>
 	</array>
 </dict>
 </plist>

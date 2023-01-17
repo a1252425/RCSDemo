@@ -1,49 +1,19 @@
 //
-//  ViewController.m
+//  HomeViewController+Login.m
 //  RCSDemo
 //
-//  Created by shuai shao on 2022/12/26.
+//  Created by shuai shao on 2023/1/17.
 //
+
+#import "HomeViewController+Login.h"
 
 #import "RCSSUser.h"
 
-#import "ViewController.h"
-#import "RCSConversationViewController.h"
-#import "RCSChatViewController.h"
-
-#import "RCSHomeItem.h"
-#import "RCSHomeViewModel.h"
-#import "RCSHomeCellProtocol.h"
-
-@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
-
-@property (nonatomic, weak) IBOutlet UITableView *tableView;
-
-@property (nonatomic, strong) RCSHomeViewModel *viewModel;
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self showUserIfNeeded];
-    });
-}
-
-- (IBAction)testAction {
-    RCSConversationViewController *controller = [[RCSConversationViewController alloc] initWithDisplayConversationTypes:@[@(ConversationType_PRIVATE), @(ConversationType_GROUP)] collectionConversationType:@[]];
-    [self.navigationController pushViewController:controller animated:YES];
-}
+@implementation HomeViewController (Login)
 
 - (void)showUserIfNeeded {
     NSString *token = [[NSUserDefaults standardUserDefaults] stringForKey:@"IM_Token"];
-    if (token) {
-        return [self connectIMWithToken:token];
-    }
+    if (token) { return [self connectIMWithToken:token]; }
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Users" ofType:@"plist"];
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
@@ -88,28 +58,6 @@
 
 - (void)didConnect:(NSString *)userId {
     // TODO
-}
-
-- (RCSHomeViewModel *)viewModel {
-    return _viewModel?:(_viewModel=[[RCSHomeViewModel alloc] init]);
-}
-
-#pragma mark - UITableViewDataSource -
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.viewModel.items.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    id<RCSHomeItemProtocol> item = self.viewModel.items[indexPath.row];
-    UITableViewCell<RCSHomeCellProtocol> *cell = [tableView dequeueReusableCellWithIdentifier:item.identifier forIndexPath:indexPath];
-    return [cell update:item];
-}
-
-#pragma mark - UITableViewDelegate -
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.viewModel.items[indexPath.row] performActionWithSender:self];
 }
 
 @end

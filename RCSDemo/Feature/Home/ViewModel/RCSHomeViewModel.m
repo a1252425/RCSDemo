@@ -5,18 +5,16 @@
 //  Created by shuai shao on 2023/1/17.
 //
 
-#import "RCSHomeViewModel.h"
-
 #import "RCSHomeItem.h"
-#import "RCSHomeItemProtocol.h"
+#import "RCSHomeViewModel.h"
 
 @implementation RCSHomeViewModel
 
-- (NSArray<id<RCSHomeItemProtocol>> *)items {
+- (NSArray<id<RCSHomeItem>> *)items {
     if (_items) return _items;
     NSMutableArray *items = [NSMutableArray array];
     for(Class aClass in RCSHomeItem.shared.classes) {
-        if ([aClass conformsToProtocol:@protocol(RCSHomeItemProtocol)]) {
+        if ([aClass conformsToProtocol:@protocol(RCSHomeItem)]) {
             [items addObject:[[aClass alloc] init]];
         }
     }

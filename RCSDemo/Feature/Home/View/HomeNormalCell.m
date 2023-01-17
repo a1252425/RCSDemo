@@ -7,7 +7,7 @@
 
 #import "HomeNormalCell.h"
 
-#import "RCSHomeItemProtocol.h"
+#import "RCSHomeItem.h"
 
 @implementation HomeNormalCell
 
@@ -22,7 +22,7 @@
     // Configure the view for the selected state
 }
 
-- (UITableViewCell *)update:(id<RCSHomeItemProtocol>)item {
+- (UITableViewCell *)update:(id<RCSHomeItem>)item {
     self.titleLabel.text = [item title];
     return self;
 }

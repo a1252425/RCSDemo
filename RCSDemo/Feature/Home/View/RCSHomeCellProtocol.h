@@ -5,17 +5,17 @@
 //  Created by shuai shao on 2023/1/17.
 //
 
-#import <Foundation/Foundation.h>
+#import "RCSProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol RCSHomeItemProtocol;
+@protocol RCSHomeItem;
 
 @class UITableViewCell;
 
-@protocol RCSHomeCellProtocol <NSObject>
+@protocol RCSHomeCellProtocol <RCSProtocol>
 
-- (UITableViewCell *)update:(id<RCSHomeItemProtocol>)item;
+- (UITableViewCell *)update:(id<RCSHomeItem>)item;
 
 @end
 
