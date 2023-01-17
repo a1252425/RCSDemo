@@ -1,6 +1,4 @@
 
-#source 'git@github.com:a1252425/SSSpec.git'
-
 platform :ios, '13.0'
 
 target 'RCSDemo' do
@@ -9,7 +7,7 @@ target 'RCSDemo' do
   
   # Pods for RCSDemo
   #pod 'RongCloudIM/IMKit'#, :configurations => ['Debug']
-#  pod 'RongCloudOpenSource/IMKit', '5.1.8'#, :configurations => ['Debug']
+  pod 'RongCloudOpenSource/IMKit'#, '5.1.8'#, :configurations => ['Debug']
   #pod 'RongCloudOpenSource/IMKit'#, :path => '~/workspace/ios-ui-sdk-set'
   
   #pod 'RongCloudIM/IMKit', '5.3.4'
