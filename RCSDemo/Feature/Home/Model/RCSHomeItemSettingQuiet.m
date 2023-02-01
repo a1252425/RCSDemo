@@ -67,15 +67,23 @@
 }
 
 - (void)enableNotificationQuiet {
-    [[RCIMClient sharedRCIMClient] setNotificationQuietHours:@"12:00:00"
-                                                    spanMins:1440
-                                                     success:^{}
-                                                       error:^(RCErrorCode status) {}];
+    [[RCIMClient sharedRCIMClient] setNotificationQuietHours:@"10:00:00"
+                                                    spanMins:600
+                                                     success:^{
+        NSLog(@"setNotificationQuietHours success");
+    }
+                                                       error:^(RCErrorCode status) {
+        NSLog(@"setNotificationQuietHours failed %@", @(status));
+    }];
 }
 
 - (void)disableNotificationQuiet {
-    [[RCIMClient sharedRCIMClient] removeNotificationQuietHours:^{}
-                                                          error:^(RCErrorCode status) {}];
+    [[RCIMClient sharedRCIMClient] removeNotificationQuietHours:^{
+        NSLog(@"removeNotificationQuietHours success");
+    }
+                                                          error:^(RCErrorCode status) {
+        NSLog(@"removeNotificationQuietHours failed %@", @(status));
+    }];
 }
 
 @end

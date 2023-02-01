@@ -17,4 +17,7 @@
 #import <RongCloudOpenSource/RongIMKit.h>
 #endif
 
+#import "RCMessage+Easy.h"
+#import "RCCoreClient+Easy.h"
+
 #endif /* PrefixHeader_pch */

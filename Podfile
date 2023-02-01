@@ -1,5 +1,5 @@
 
-platform :ios, '13.0'
+platform :ios, '11.0'
 
 target 'RCSDemo' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -7,10 +7,11 @@ target 'RCSDemo' do
   
   # Pods for RCSDemo
   #pod 'RongCloudIM/IMKit'#, :configurations => ['Debug']
-  pod 'RongCloudOpenSource/IMKit'#, '5.1.8'#, :configurations => ['Debug']
+  pod 'RongCloudOpenSource/IMKit', '5.3.3'#, :configurations => ['Debug']
   #pod 'RongCloudOpenSource/IMKit'#, :path => '~/workspace/ios-ui-sdk-set'
   
-  #pod 'RongCloudIM/IMKit', '5.3.4'
+#  pod 'RongCloudIM/IMKit'
+#  pod 'Masonry'
   
   target 'RCSDemoTests' do
     inherit! :search_paths

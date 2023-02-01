@@ -26,7 +26,7 @@
         [users addObject:user];
     }
     
-    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"选择用户" message:@"选择用户" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"登录" message:@"选择用户" preferredStyle:UIAlertControllerStyleActionSheet];
     for (RCSSUser *user in users) {
         UIAlertAction *action = [UIAlertAction actionWithTitle:user.name style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [[NSUserDefaults standardUserDefaults] setObject:user.identifier forKey:@"userId"];

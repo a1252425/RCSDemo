@@ -9,6 +9,8 @@
 
 #define AppKey @"pvxdm17jpw9ur"
 
+#import <UserNotifications/UserNotifications.h>
+
 @interface AppDelegate () <RCIMUserInfoDataSource>
 
 @end
@@ -23,20 +25,10 @@
     RCIM.sharedRCIM.userInfoDataSource = self;
     RCCoreClient.sharedCoreClient.logLevel = RC_Log_Level_None;
     
-    NSMutableDictionary *tmp = [NSMutableDictionary dictionary];
-    tmp[@""] = [NSDate dateWithTimeIntervalSinceNow:300];
-    
-    if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
-        //注册推送, 用于iOS8以及iOS8之后的系统
-        UIUserNotificationSettings *settings = [UIUserNotificationSettings
-            settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert)
-                  categories:nil];
-        [application registerUserNotificationSettings:settings];
-    } else {
-        //注册推送，用于iOS8之前的系统
-        UIRemoteNotificationType myTypes =
-            UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound;
-        [application registerForRemoteNotificationTypes:myTypes];
+    if (@available(iOS 10.0, *)) {
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        }];
     }
     
     return YES;

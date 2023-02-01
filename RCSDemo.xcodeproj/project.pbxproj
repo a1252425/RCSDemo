@@ -10,6 +10,8 @@
 		150B3304B43E6D03ACAAFF94 /* Pods_RCSDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7001679518613075ED839AE8 /* Pods_RCSDemoTests.framework */; };
 		A2E32536BA87E337DCCF2C50 /* Pods_RCSDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9071F636CA131DB76EA103BE /* Pods_RCSDemo.framework */; };
 		A5263EFB5CD2AE6B29DDB25E /* Pods_RCSDemo_RCSDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF63249BB1F6965E2E50D135 /* Pods_RCSDemo_RCSDemoUITests.framework */; };
+		C906332E2984C1110080DBAD /* RCMessage+Easy.m in Sources */ = {isa = PBXBuildFile; fileRef = C906332D2984C1110080DBAD /* RCMessage+Easy.m */; };
+		C90633322984F4430080DBAD /* RCCoreClient+Easy.m in Sources */ = {isa = PBXBuildFile; fileRef = C90633312984F4430080DBAD /* RCCoreClient+Easy.m */; };
 		C92FFBE0295AA2A300776DF2 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = C92FFBDF295AA2A300776DF2 /* Dog.m */; };
 		C99DA833296BF4EC00F774ED /* RCSConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C99DA832296BF4EC00F774ED /* RCSConnection.m */; };
 		C9BB37B229768252006C3890 /* HomeNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37B129768252006C3890 /* HomeNormalCell.m */; };
@@ -79,6 +81,10 @@
 		AC791E61CF2C394868AA80FC /* Pods-RCSDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSDemoTests.release.xcconfig"; path = "Target Support Files/Pods-RCSDemoTests/Pods-RCSDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		BF63249BB1F6965E2E50D135 /* Pods_RCSDemo_RCSDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCSDemo_RCSDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C9BF08969CCD2830E0470F /* Pods-RCSDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSDemo.debug.xcconfig"; path = "Target Support Files/Pods-RCSDemo/Pods-RCSDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C906332C2984C1110080DBAD /* RCMessage+Easy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCMessage+Easy.h"; sourceTree = "<group>"; };
+		C906332D2984C1110080DBAD /* RCMessage+Easy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCMessage+Easy.m"; sourceTree = "<group>"; };
+		C90633302984F4430080DBAD /* RCCoreClient+Easy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCCoreClient+Easy.h"; sourceTree = "<group>"; };
+		C90633312984F4430080DBAD /* RCCoreClient+Easy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCCoreClient+Easy.m"; sourceTree = "<group>"; };
 		C92FFBDC295AA22500776DF2 /* TestsPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestsPrefix.pch; sourceTree = "<group>"; };
 		C92FFBDE295AA2A300776DF2 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		C92FFBDF295AA2A300776DF2 /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
@@ -188,6 +194,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C906332B2984C0E90080DBAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C906332C2984C1110080DBAD /* RCMessage+Easy.h */,
+				C906332D2984C1110080DBAD /* RCMessage+Easy.m */,
+				C90633302984F4430080DBAD /* RCCoreClient+Easy.h */,
+				C90633312984F4430080DBAD /* RCCoreClient+Easy.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C92FFBDD295AA29800776DF2 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +249,7 @@
 		C99DA82B296BF43A00F774ED /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				C906332B2984C0E90080DBAD /* Model */,
 				C9D53EE6296FF23400E36858 /* View */,
 				C99DA82C296BF44000F774ED /* ViewController */,
 			);
@@ -423,8 +441,8 @@
 				C9F6F3C72959A999009FAAE6 /* Frameworks */,
 				C9F6F3C82959A999009FAAE6 /* Resources */,
 				C9BB37A029768042006C3890 /* Embed Frameworks */,
-				ADA7306FCA9858323237409F /* [CP] Embed Pods Frameworks */,
 				A0588C73922588157F74C558 /* [CP] Copy Pods Resources */,
+				52047CC36B8D68A456CB2F49 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -462,8 +480,8 @@
 				C9F6F3EB2959A99A009FAAE6 /* Sources */,
 				C9F6F3EC2959A99A009FAAE6 /* Frameworks */,
 				C9F6F3ED2959A99A009FAAE6 /* Resources */,
-				DEA6EBEB3A93E14A6C879427 /* [CP] Embed Pods Frameworks */,
 				7B2E3AE12407AC2A7EA56CBD /* [CP] Copy Pods Resources */,
+				30E4D1651BBCB80040A928C8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -571,6 +589,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		30E4D1651BBCB80040A928C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RCSDemo-RCSDemoUITests/Pods-RCSDemo-RCSDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RCSDemo-RCSDemoUITests/Pods-RCSDemo-RCSDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RCSDemo-RCSDemoUITests/Pods-RCSDemo-RCSDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52047CC36B8D68A456CB2F49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RCSDemo/Pods-RCSDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RCSDemo/Pods-RCSDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RCSDemo/Pods-RCSDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5D50AE757EC3548BDA310263 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -627,23 +679,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RCSDemo/Pods-RCSDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ADA7306FCA9858323237409F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RCSDemo/Pods-RCSDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RCSDemo/Pods-RCSDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RCSDemo/Pods-RCSDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DE9B9604828C3552464876F3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -666,23 +701,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DEA6EBEB3A93E14A6C879427 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RCSDemo-RCSDemoUITests/Pods-RCSDemo-RCSDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RCSDemo-RCSDemoUITests/Pods-RCSDemo-RCSDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RCSDemo-RCSDemoUITests/Pods-RCSDemo-RCSDemoUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -698,10 +716,12 @@
 				C9F6F40D2959AB03009FAAE6 /* RCSChatViewController.m in Sources */,
 				C9BB37D02976A9DC006C3890 /* RCSHomeItemSettingQuiet.m in Sources */,
 				C9BB37D62976ABB8006C3890 /* RCSHomeItemChatRoom.m in Sources */,
+				C90633322984F4430080DBAD /* RCCoreClient+Easy.m in Sources */,
 				C9D53EE5296FF22E00E36858 /* RCMessageCell+Mark.m in Sources */,
 				C9BB37B529768265006C3890 /* HomeSwitchCell.m in Sources */,
 				C9BB37BB29768398006C3890 /* RCSHomeItem.m in Sources */,
 				C9F6F4072959AA35009FAAE6 /* RCSSUser.m in Sources */,
+				C906332E2984C1110080DBAD /* RCMessage+Easy.m in Sources */,
 				C9BB37B229768252006C3890 /* HomeNormalCell.m in Sources */,
 				C9BB37BE2976842D006C3890 /* RCSHomeViewModel.m in Sources */,
 				C9BB37D32976AABE006C3890 /* RCSHomeItemChat.m in Sources */,
