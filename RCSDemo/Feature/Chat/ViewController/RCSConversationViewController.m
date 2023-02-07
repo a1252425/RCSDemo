@@ -5,7 +5,7 @@
 //  Created by shaoshuai on 2022/12/8.
 //
 
-#import "RCSConversationViewController.h"
+#import "RCSConversationViewController+Test.h"
 
 #import "RCSChatViewController.h"
 
@@ -18,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self activeTestAction];
+        [self sendFirstMessage];
+    });
 }
 
 - (void)onSelectedTableRow:(RCConversationModelType)conversationModelType conversationModel:(RCConversationModel *)model atIndexPath:(NSIndexPath *)indexPath {

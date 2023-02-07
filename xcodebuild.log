@@ -1,0 +1,24 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -workspace RCSDemo.xcworkspace -scheme RCSDemo -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 14" -configuration Debug GCC_PRECOMPILE_PREFIX_HEADER=YES CLANG_ENABLE_MODULE_DEBUGGING=NO COMPILER_INDEX_STORE_ENABLE=NO "OTHER_CFLAGS=-DNS_FORMAT_ARGUMENT(A)= -D_Nullable_result=_Nullable"
+
+User defaults from command line:
+    IDEPackageSupportUseBuiltinSCM = YES
+
+Build settings from command line:
+    CLANG_ENABLE_MODULE_DEBUGGING = NO
+    COMPILER_INDEX_STORE_ENABLE = NO
+    GCC_PRECOMPILE_PREFIX_HEADER = YES
+    OTHER_CFLAGS = -DNS_FORMAT_ARGUMENT(A)= -D_Nullable_result=_Nullable
+    SDKROOT = iphonesimulator16.2
+
+Prepare packages
+
+Computing target dependency graph and provisioning inputs
+
+Create build description
+Build description signature: 68bb92797c161c2e6fdd08a113a98425
+Build description path: /Users/shuaishao/workspace/RCSDemo/DerivedData/RCSDemo/Build/Intermediates.noindex/XCBuildData/68bb92797c161c2e6fdd08a113a98425-desc.xcbuild
+
+note: Building targets in dependency order
+** BUILD SUCCEEDED **
+

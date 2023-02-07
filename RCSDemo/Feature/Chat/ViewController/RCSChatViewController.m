@@ -38,4 +38,8 @@
     }
 }
 
+- (void)didSendMessageModel:(NSInteger)status model:(RCMessageModel *)messageModel {
+    NSLog(@"did send message uid: %@, sentTime %@", messageModel.messageUId, @(messageModel.sentTime));
+}
+
 @end

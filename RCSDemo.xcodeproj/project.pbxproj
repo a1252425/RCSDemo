@@ -13,6 +13,7 @@
 		C906332E2984C1110080DBAD /* RCMessage+Easy.m in Sources */ = {isa = PBXBuildFile; fileRef = C906332D2984C1110080DBAD /* RCMessage+Easy.m */; };
 		C90633322984F4430080DBAD /* RCCoreClient+Easy.m in Sources */ = {isa = PBXBuildFile; fileRef = C90633312984F4430080DBAD /* RCCoreClient+Easy.m */; };
 		C92FFBE0295AA2A300776DF2 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = C92FFBDF295AA2A300776DF2 /* Dog.m */; };
+		C98448AB2991F34B00EC4794 /* RCSConversationViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = C98448AA2991F34B00EC4794 /* RCSConversationViewController+Test.m */; };
 		C99DA833296BF4EC00F774ED /* RCSConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C99DA832296BF4EC00F774ED /* RCSConnection.m */; };
 		C9BB37B229768252006C3890 /* HomeNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37B129768252006C3890 /* HomeNormalCell.m */; };
 		C9BB37B529768265006C3890 /* HomeSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37B429768265006C3890 /* HomeSwitchCell.m */; };
@@ -88,6 +89,8 @@
 		C92FFBDC295AA22500776DF2 /* TestsPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestsPrefix.pch; sourceTree = "<group>"; };
 		C92FFBDE295AA2A300776DF2 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		C92FFBDF295AA2A300776DF2 /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		C98448A92991F34B00EC4794 /* RCSConversationViewController+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCSConversationViewController+Test.h"; sourceTree = "<group>"; };
+		C98448AA2991F34B00EC4794 /* RCSConversationViewController+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCSConversationViewController+Test.m"; sourceTree = "<group>"; };
 		C99DA831296BF4EC00F774ED /* RCSConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSConnection.h; sourceTree = "<group>"; };
 		C99DA832296BF4EC00F774ED /* RCSConnection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCSConnection.m; sourceTree = "<group>"; };
 		C9BB37B029768252006C3890 /* HomeNormalCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeNormalCell.h; sourceTree = "<group>"; };
@@ -263,6 +266,8 @@
 				C9F6F4092959AB03009FAAE6 /* RCSChatViewController.m */,
 				C9F6F40B2959AB03009FAAE6 /* RCSConversationViewController.h */,
 				C9F6F40A2959AB03009FAAE6 /* RCSConversationViewController.m */,
+				C98448A92991F34B00EC4794 /* RCSConversationViewController+Test.h */,
+				C98448AA2991F34B00EC4794 /* RCSConversationViewController+Test.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -721,6 +726,7 @@
 				C9BB37B529768265006C3890 /* HomeSwitchCell.m in Sources */,
 				C9BB37BB29768398006C3890 /* RCSHomeItem.m in Sources */,
 				C9F6F4072959AA35009FAAE6 /* RCSSUser.m in Sources */,
+				C98448AB2991F34B00EC4794 /* RCSConversationViewController+Test.m in Sources */,
 				C906332E2984C1110080DBAD /* RCMessage+Easy.m in Sources */,
 				C9BB37B229768252006C3890 /* HomeNormalCell.m in Sources */,
 				C9BB37BE2976842D006C3890 /* RCSHomeViewModel.m in Sources */,
