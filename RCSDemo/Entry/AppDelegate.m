@@ -11,7 +11,7 @@
 
 #import <UserNotifications/UserNotifications.h>
 
-@interface AppDelegate () <RCIMUserInfoDataSource>
+@interface AppDelegate () <RCIMUserInfoDataSource, RCIMReceiveMessageDelegate>
 
 @end
 
@@ -30,6 +30,8 @@
         [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError * _Nullable error) {
         }];
     }
+    
+    [RCIM.sharedRCIM setReceiveMessageDelegate:self];
     
     return YES;
 }
@@ -55,6 +57,12 @@
 
 - (void)getUserInfoWithUserId:(NSString *)userId completion:(void (^)(RCUserInfo *))completion {
     completion([[RCUserInfo alloc] initWithUserId:userId name:userId portrait:nil]);
+}
+
+#pragma mark - RCIMReceiveMessageDelegate -
+
+- (void)onRCIMReceiveMessage:(RCMessage *)message left:(int)left {
+    NSLog(@"onRCIMReceiveMessage");
 }
 
 @end
