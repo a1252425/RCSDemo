@@ -6,8 +6,8 @@ target 'RCSDemo' do
   use_frameworks!
   
   # Pods for RCSDemo
-  #pod 'RongCloudIM/IMKit'#, :configurations => ['Debug']
-  pod 'RongCloudOpenSource/IMKit', '5.1.3'#, :configurations => ['Debug']
+#  pod 'RongCloudIM/IMKit'#, :configurations => ['Debug']
+  pod 'RongCloudOpenSource/IMKit', '5.2.5'#, :configurations => ['Debug']
   #pod 'RongCloudOpenSource/IMKit'#, :path => '~/workspace/ios-ui-sdk-set'
   
 #  pod 'RongCloudIM/IMKit'

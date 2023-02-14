@@ -1,27 +1,24 @@
 PODS:
-  - RongCloudIM/ChatRoom (5.1.3):
+  - RongCloudIM/ChatRoom (5.2.5):
     - RongCloudIM/IMLibCore
-  - RongCloudIM/CustomerService (5.1.3):
+  - RongCloudIM/CustomerService (5.2.5):
     - RongCloudIM/IMLibCore
-  - RongCloudIM/Discussion (5.1.3):
+  - RongCloudIM/Discussion (5.2.5):
     - RongCloudIM/IMLibCore
-  - RongCloudIM/IMLib (5.1.3):
+  - RongCloudIM/IMLib (5.2.5):
     - RongCloudIM/ChatRoom
     - RongCloudIM/CustomerService
     - RongCloudIM/Discussion
     - RongCloudIM/IMLibCore
-    - RongCloudIM/Location
     - RongCloudIM/PublicService
-  - RongCloudIM/IMLibCore (5.1.3)
-  - RongCloudIM/Location (5.1.3):
+  - RongCloudIM/IMLibCore (5.2.5)
+  - RongCloudIM/PublicService (5.2.5):
     - RongCloudIM/IMLibCore
-  - RongCloudIM/PublicService (5.1.3):
-    - RongCloudIM/IMLibCore
-  - RongCloudOpenSource/IMKit (5.1.3):
-    - RongCloudIM/IMLib (= 5.1.3)
+  - RongCloudOpenSource/IMKit (5.2.5):
+    - RongCloudIM/IMLib (= 5.2.5)
 
 DEPENDENCIES:
-  - RongCloudOpenSource/IMKit (= 5.1.3)
+  - RongCloudOpenSource/IMKit (= 5.2.5)
 
 SPEC REPOS:
   trunk:
@@ -29,9 +26,9 @@ SPEC REPOS:
     - RongCloudOpenSource
 
 SPEC CHECKSUMS:
-  RongCloudIM: 14d6873a78063790ae061243b857040294b84c59
-  RongCloudOpenSource: 2ebd99a08c414274e0ff6b238e99ecebbc03f128
+  RongCloudIM: 4c3befbe6e9dd813a87c499c81fb2eac54c354b3
+  RongCloudOpenSource: 6449646f6d85cbd26d50d8d52fd75bd54b9e0bd5
 
-PODFILE CHECKSUM: 71413b0f01208724dadf93616c03b567272802e1
+PODFILE CHECKSUM: 33fc88163f19ab5747e0818dbe8d14ede502e32c
 
 COCOAPODS: 1.11.3

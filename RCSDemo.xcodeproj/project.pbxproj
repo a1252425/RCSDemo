@@ -13,6 +13,8 @@
 		C906332E2984C1110080DBAD /* RCMessage+Easy.m in Sources */ = {isa = PBXBuildFile; fileRef = C906332D2984C1110080DBAD /* RCMessage+Easy.m */; };
 		C90633322984F4430080DBAD /* RCCoreClient+Easy.m in Sources */ = {isa = PBXBuildFile; fileRef = C90633312984F4430080DBAD /* RCCoreClient+Easy.m */; };
 		C92FFBE0295AA2A300776DF2 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = C92FFBDF295AA2A300776DF2 /* Dog.m */; };
+		C9444731299B351000697044 /* RCChatSessionInputBarControl+bottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C944472D299B351000697044 /* RCChatSessionInputBarControl+bottomBar.m */; };
+		C9444732299B351000697044 /* RCConversationViewController+bottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C944472F299B351000697044 /* RCConversationViewController+bottomBar.m */; };
 		C98448AB2991F34B00EC4794 /* RCSConversationViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = C98448AA2991F34B00EC4794 /* RCSConversationViewController+Test.m */; };
 		C99DA833296BF4EC00F774ED /* RCSConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C99DA832296BF4EC00F774ED /* RCSConnection.m */; };
 		C9BB37B229768252006C3890 /* HomeNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37B129768252006C3890 /* HomeNormalCell.m */; };
@@ -89,6 +91,10 @@
 		C92FFBDC295AA22500776DF2 /* TestsPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestsPrefix.pch; sourceTree = "<group>"; };
 		C92FFBDE295AA2A300776DF2 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		C92FFBDF295AA2A300776DF2 /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		C944472D299B351000697044 /* RCChatSessionInputBarControl+bottomBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCChatSessionInputBarControl+bottomBar.m"; sourceTree = "<group>"; };
+		C944472E299B351000697044 /* RCConversationViewController+bottomBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCConversationViewController+bottomBar.h"; sourceTree = "<group>"; };
+		C944472F299B351000697044 /* RCConversationViewController+bottomBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCConversationViewController+bottomBar.m"; sourceTree = "<group>"; };
+		C9444730299B351000697044 /* RCChatSessionInputBarControl+bottomBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCChatSessionInputBarControl+bottomBar.h"; sourceTree = "<group>"; };
 		C98448A92991F34B00EC4794 /* RCSConversationViewController+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCSConversationViewController+Test.h"; sourceTree = "<group>"; };
 		C98448AA2991F34B00EC4794 /* RCSConversationViewController+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCSConversationViewController+Test.m"; sourceTree = "<group>"; };
 		C99DA831296BF4EC00F774ED /* RCSConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSConnection.h; sourceTree = "<group>"; };
@@ -354,6 +360,10 @@
 		C9D53EE6296FF23400E36858 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C9444730299B351000697044 /* RCChatSessionInputBarControl+bottomBar.h */,
+				C944472D299B351000697044 /* RCChatSessionInputBarControl+bottomBar.m */,
+				C944472E299B351000697044 /* RCConversationViewController+bottomBar.h */,
+				C944472F299B351000697044 /* RCConversationViewController+bottomBar.m */,
 				C9D53EE3296FF22E00E36858 /* RCMessageCell+Mark.h */,
 				C9D53EE4296FF22E00E36858 /* RCMessageCell+Mark.m */,
 			);
@@ -720,6 +730,8 @@
 				C99DA833296BF4EC00F774ED /* RCSConnection.m in Sources */,
 				C9F6F40D2959AB03009FAAE6 /* RCSChatViewController.m in Sources */,
 				C9BB37D02976A9DC006C3890 /* RCSHomeItemSettingQuiet.m in Sources */,
+				C9444731299B351000697044 /* RCChatSessionInputBarControl+bottomBar.m in Sources */,
+				C9444732299B351000697044 /* RCConversationViewController+bottomBar.m in Sources */,
 				C9BB37D62976ABB8006C3890 /* RCSHomeItemChatRoom.m in Sources */,
 				C90633322984F4430080DBAD /* RCCoreClient+Easy.m in Sources */,
 				C9D53EE5296FF22E00E36858 /* RCMessageCell+Mark.m in Sources */,
