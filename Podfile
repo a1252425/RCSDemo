@@ -7,7 +7,7 @@ target 'RCSDemo' do
   
   # Pods for RCSDemo
 #  pod 'RongCloudIM/IMKit'#, :configurations => ['Debug']
-  pod 'RongCloudOpenSource/IMKit', '5.2.5'#, :configurations => ['Debug']
+  pod 'RongCloudOpenSource/IMKit', '5.3.4'#, :configurations => ['Debug']
   #pod 'RongCloudOpenSource/IMKit'#, :path => '~/workspace/ios-ui-sdk-set'
   
 #  pod 'RongCloudIM/IMKit'

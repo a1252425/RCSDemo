@@ -13,7 +13,7 @@
 
 - (void)showUserIfNeeded {
     NSString *token = [[NSUserDefaults standardUserDefaults] stringForKey:@"IM_Token"];
-    if (token) { return [self connectIMWithToken:@"6tBEPnmhjykj6rTwC/8zmXcPgOFlZmX4JLwIfj5ax2NahcPun35yWw==@ou8b.cn.rongnav.com;ou8b.cn.rongcfg.com"]; }
+    if (token) { return [self connectIMWithToken:token]; }
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Users" ofType:@"plist"];
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
@@ -46,6 +46,7 @@
     [self presentViewController:controller animated:YES completion:nil];
 }
 
+//6tBEPnmhjykj6rTwC/8zmXcPgOFlZmX4JLwIfj5ax2NahcPun35yWw==@ou8b.cn.rongnav.com;ou8b.cn.rongcfg.com
 - (void)connectIMWithToken:(NSString *)token {
     [RCIM.sharedRCIM connectWithToken:token dbOpened:^(RCDBErrorCode code) {
     } success:^(NSString *userId) {

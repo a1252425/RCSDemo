@@ -7,7 +7,7 @@
 
 #import "AppDelegate.h"
 
-#define AppKey @"tdrvipkstxe05"
+#define AppKey @"pvxdm17jpw9ur"
 
 #import <UserNotifications/UserNotifications.h>
 
