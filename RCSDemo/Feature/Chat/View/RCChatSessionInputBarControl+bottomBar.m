@@ -44,7 +44,7 @@
         [self setBottomBarFrame:frame];
         return;
     }
-    frame.origin.y -= HIGH_BOTTOMBAR;
+    frame.origin.y -= HIGH_BOTTOM_BAR;
     [self setBottomBarFrame:frame];
 }
 

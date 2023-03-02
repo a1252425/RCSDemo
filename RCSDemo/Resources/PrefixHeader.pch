@@ -13,8 +13,10 @@
 
 #if __has_include(<RongIMKit/RongIMKit.h>)
 #import <RongIMKit/RongIMKit.h>
-#else
+#elif __has_include(<RongCloudOpenSource/RongIMKit.h>)
 #import <RongCloudOpenSource/RongIMKit.h>
+#elif __has_include(<RCSCheapCopyIM/RongIMKit.h>)
+#import <RCSCheapCopyIM/RongIMKit.h>
 #endif
 
 #import "RCMessage+Easy.h"

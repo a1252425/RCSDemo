@@ -1,4 +1,5 @@
-
+#source "git@github.com:a1252425/SSSpec.git"
+#source "https://github.com/CocoaPods/Specs.git"
 platform :ios, '11.0'
 
 target 'RCSDemo' do
@@ -7,11 +8,13 @@ target 'RCSDemo' do
   
   # Pods for RCSDemo
 #  pod 'RongCloudIM/IMKit'#, :configurations => ['Debug']
-  pod 'RongCloudOpenSource/IMKit', '5.3.4'#, :configurations => ['Debug']
-  #pod 'RongCloudOpenSource/IMKit'#, :path => '~/workspace/ios-ui-sdk-set'
+#  pod 'RongCloudOpenSource/IMKit', '5.1.9'#, :configurations => ['Debug']
+  pod 'RongCloudOpenSource/IMKit'#, :path => '~/workspace/ios-ui-sdk-set'
   
-#  pod 'RongCloudIM/IMKit'
+#  pod 'RongCloudIM/IMKit', '5.1.9'
 #  pod 'Masonry'
+
+#  pod 'RCSCheapCopyIM/IMKit'
   
   target 'RCSDemoTests' do
     inherit! :search_paths

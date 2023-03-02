@@ -7,7 +7,7 @@
 
 #import "RCSHomeItem.h"
 #import "RCSHomeItemChatRoom.h"
-#import "RCSConversationViewController.h"
+#import "RCSChatViewController.h"
 
 @interface RCSHomeItemChatRoom () <RCSHomeItem>
 
@@ -16,7 +16,7 @@
 @implementation RCSHomeItemChatRoom
 
 + (void)load {
-//    [[RCSHomeItem shared] registerClass:[self class]];
+    [[RCSHomeItem shared] registerClass:[self class]];
 }
 
 + (NSInteger)index {
@@ -24,7 +24,7 @@
 }
 
 - (NSString *)title {
-    return @"群聊";
+    return @"聊天室";
 }
 
 - (NSString *)identifier {
@@ -34,9 +34,9 @@
 - (void)performActionWithSender:(nullable id)sender {
     if (![sender isKindOfClass:[UIViewController class]]) return;
     UIViewController *controller = (UIViewController *)sender;
-    RCSConversationViewController *list = [[RCSConversationViewController alloc] initWithDisplayConversationTypes:@[@(ConversationType_CHATROOM)] collectionConversationType:@[]];
-    [controller.navigationController pushViewController:list animated:YES];
-    dispatch_async(dispatch_get_main_queue(), ^{ list.title = [self title]; });
+    RCSChatViewController *chat = [[RCSChatViewController alloc] initWithConversationType:ConversationType_CHATROOM targetId:@"6"];
+    [controller.navigationController pushViewController:chat animated:YES];
+    dispatch_async(dispatch_get_main_queue(), ^{ chat.title = [self title]; });
 }
 
 @end

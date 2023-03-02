@@ -41,5 +41,23 @@
 - (void)didSendMessageModel:(NSInteger)status model:(RCMessageModel *)messageModel {
     NSLog(@"did send message uid: %@, sentTime %@", messageModel.messageUId, @(messageModel.sentTime));
 }
+//
+//- (RCMessageContent *)willSendMessage:(RCMessageContent *)messageContent {
+//    if ([messageContent isKindOfClass:[RCImageMessage class]]) {
+//        [[RCCoreClient sharedCoreClient] sendMediaMessage:self.conversationType targetId:self.targetId content:messageContent pushContent:nil pushData:nil attached:^(RCMessage * _Nullable message) {
+//            
+//        } progress:^(int progress, long messageId) {
+//            
+//        } success:^(long messageId) {
+//            
+//        } error:^(RCErrorCode errorCode, long messageId) {
+//            
+//        } cancel:^(long messageId) {
+//            
+//        }];
+//        return nil;
+//    }
+//    return messageContent;
+//}
 
 @end

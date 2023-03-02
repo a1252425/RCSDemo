@@ -23,7 +23,7 @@
     
     [RCIM.sharedRCIM initWithAppKey:AppKey];
     RCIM.sharedRCIM.userInfoDataSource = self;
-    RCCoreClient.sharedCoreClient.logLevel = RC_Log_Level_None;
+    RCCoreClient.sharedCoreClient.logLevel = RC_Log_Level_Debug;
     
     if (@available(iOS 10.0, *)) {
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];

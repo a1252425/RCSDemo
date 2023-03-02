@@ -6,7 +6,7 @@
 //  Copyright © 2021 RC. All rights reserved.
 //
 
-#import <RongCloudOpenSource/RongIMKit.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

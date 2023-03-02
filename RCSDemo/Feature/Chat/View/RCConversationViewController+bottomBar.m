@@ -33,10 +33,10 @@
    
     if (!self.bottomBarView) {
         CGRect frame = self.conversationMessageCollectionView.frame;
-        frame.size.height -= HIGH_BOTTOMBAR;
+        frame.size.height -= HIGH_BOTTOM_BAR;
         CGRect inputBarFrame = self.chatSessionInputBarControl.frame;
         self.conversationMessageCollectionView.frame = frame;
-        self.bottomBarView = [[UIView alloc] initWithFrame:CGRectMake(0, inputBarFrame.origin.y + inputBarFrame.size.height, inputBarFrame.size.width, HIGH_BOTTOMBAR)];
+        self.bottomBarView = [[UIView alloc] initWithFrame:CGRectMake(0, inputBarFrame.origin.y + inputBarFrame.size.height, inputBarFrame.size.width, HIGH_BOTTOM_BAR)];
         [self.bottomBarView setBackgroundColor:[UIColor redColor]];
         [self.view addSubview:self.bottomBarView];
        
@@ -46,7 +46,7 @@
 
 - (void)chatInputBarAddBottomBar:(RCChatSessionInputBarControl *)chatInputBar shouldChangeFrame:(CGRect)frame{
     [self chatInputBarAddBottomBar:chatInputBar shouldChangeFrame:frame];
-    self.bottomBarView.frame = CGRectMake(0, frame.origin.y + frame.size.height, frame.size.width, HIGH_BOTTOMBAR);
+    self.bottomBarView.frame = CGRectMake(0, frame.origin.y + frame.size.height, frame.size.width, HIGH_BOTTOM_BAR);
 }
 
 

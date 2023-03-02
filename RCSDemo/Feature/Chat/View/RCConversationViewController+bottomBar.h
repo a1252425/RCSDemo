@@ -6,10 +6,10 @@
 //  Copyright © 2021 RC. All rights reserved.
 //
 
-#import <RongCloudOpenSource/RongIMKit.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-#define HIGH_BOTTOMBAR 80
+#define HIGH_BOTTOM_BAR 80
 
 @interface RCConversationViewController (bottomBar)
 

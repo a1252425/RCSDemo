@@ -929,6 +929,11 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RCSDemo/Resources/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RCSDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "请允许访问您的相机，这样可以拍摄视频或者照片发给好友，还可以与好友视频通话！";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "请允许使用您的位置，这样可以发送地理位置信息给好友！";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "请允许使用您的位置，这样可以发送地理位置信息给好友！";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "请允许访问您的相册，这样可以保存照片到相册，也可以发送图片消息！";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "请允许访问您的相册，这样可以保存照片到相册，也可以发送图片消息！";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -963,6 +968,11 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RCSDemo/Resources/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RCSDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "请允许访问您的相机，这样可以拍摄视频或者照片发给好友，还可以与好友视频通话！";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "请允许使用您的位置，这样可以发送地理位置信息给好友！";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "请允许使用您的位置，这样可以发送地理位置信息给好友！";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "请允许访问您的相册，这样可以保存照片到相册，也可以发送图片消息！";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "请允许访问您的相册，这样可以保存照片到相册，也可以发送图片消息！";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
