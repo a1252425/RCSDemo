@@ -12,6 +12,8 @@
 		A5263EFB5CD2AE6B29DDB25E /* Pods_RCSDemo_RCSDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF63249BB1F6965E2E50D135 /* Pods_RCSDemo_RCSDemoUITests.framework */; };
 		C906332E2984C1110080DBAD /* RCMessage+Easy.m in Sources */ = {isa = PBXBuildFile; fileRef = C906332D2984C1110080DBAD /* RCMessage+Easy.m */; };
 		C90633322984F4430080DBAD /* RCCoreClient+Easy.m in Sources */ = {isa = PBXBuildFile; fileRef = C90633312984F4430080DBAD /* RCCoreClient+Easy.m */; };
+		C91E4ACB29B60386006ACCDC /* RCCoreClient+keepalive.m in Sources */ = {isa = PBXBuildFile; fileRef = C91E4ACA29B60386006ACCDC /* RCCoreClient+keepalive.m */; };
+		C91E4ACD29B60504006ACCDC /* poke.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C91E4ACC29B60504006ACCDC /* poke.mp3 */; };
 		C92FFBE0295AA2A300776DF2 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = C92FFBDF295AA2A300776DF2 /* Dog.m */; };
 		C9444731299B351000697044 /* RCChatSessionInputBarControl+bottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C944472D299B351000697044 /* RCChatSessionInputBarControl+bottomBar.m */; };
 		C9444732299B351000697044 /* RCConversationViewController+bottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C944472F299B351000697044 /* RCConversationViewController+bottomBar.m */; };
@@ -88,6 +90,9 @@
 		C906332D2984C1110080DBAD /* RCMessage+Easy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCMessage+Easy.m"; sourceTree = "<group>"; };
 		C90633302984F4430080DBAD /* RCCoreClient+Easy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCCoreClient+Easy.h"; sourceTree = "<group>"; };
 		C90633312984F4430080DBAD /* RCCoreClient+Easy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCCoreClient+Easy.m"; sourceTree = "<group>"; };
+		C91E4AC929B60386006ACCDC /* RCCoreClient+keepalive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCCoreClient+keepalive.h"; sourceTree = "<group>"; };
+		C91E4ACA29B60386006ACCDC /* RCCoreClient+keepalive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCCoreClient+keepalive.m"; sourceTree = "<group>"; };
+		C91E4ACC29B60504006ACCDC /* poke.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = poke.mp3; sourceTree = "<group>"; };
 		C92FFBDC295AA22500776DF2 /* TestsPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestsPrefix.pch; sourceTree = "<group>"; };
 		C92FFBDE295AA2A300776DF2 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		C92FFBDF295AA2A300776DF2 /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
@@ -302,6 +307,8 @@
 				C9F6F3CE2959A999009FAAE6 /* AppDelegate.m */,
 				C9F6F3D02959A999009FAAE6 /* SceneDelegate.h */,
 				C9F6F3D12959A999009FAAE6 /* SceneDelegate.m */,
+				C91E4AC929B60386006ACCDC /* RCCoreClient+keepalive.h */,
+				C91E4ACA29B60386006ACCDC /* RCCoreClient+keepalive.m */,
 				C9D53EDF296E899600E36858 /* DemoSwift.swift */,
 			);
 			path = Entry;
@@ -428,6 +435,7 @@
 		C9F6F4052959AA35009FAAE6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C91E4ACC29B60504006ACCDC /* poke.mp3 */,
 				C9F6F4022959A9E3009FAAE6 /* PrefixHeader.pch */,
 				C9F6F3D92959A99A009FAAE6 /* Assets.xcassets */,
 				C9F6F4062959AA35009FAAE6 /* Users.plist */,
@@ -559,6 +567,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9F6F3DD2959A99A009FAAE6 /* LaunchScreen.storyboard in Resources */,
+				C91E4ACD29B60504006ACCDC /* poke.mp3 in Resources */,
 				C9F6F3DA2959A99A009FAAE6 /* Assets.xcassets in Resources */,
 				C9F6F3D82959A999009FAAE6 /* Main.storyboard in Resources */,
 				C9F6F4082959AA35009FAAE6 /* Users.plist in Resources */,
@@ -734,6 +743,7 @@
 				C9444732299B351000697044 /* RCConversationViewController+bottomBar.m in Sources */,
 				C9BB37D62976ABB8006C3890 /* RCSHomeItemChatRoom.m in Sources */,
 				C90633322984F4430080DBAD /* RCCoreClient+Easy.m in Sources */,
+				C91E4ACB29B60386006ACCDC /* RCCoreClient+keepalive.m in Sources */,
 				C9D53EE5296FF22E00E36858 /* RCMessageCell+Mark.m in Sources */,
 				C9BB37B529768265006C3890 /* HomeSwitchCell.m in Sources */,
 				C9BB37BB29768398006C3890 /* RCSHomeItem.m in Sources */,
@@ -931,6 +941,7 @@
 				INFOPLIST_FILE = RCSDemo/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "请允许访问您的相机，这样可以拍摄视频或者照片发给好友，还可以与好友视频通话！";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "请允许使用您的位置，这样可以发送地理位置信息给好友！";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "请允许使用您的位置，这样可以发送地理位置信息给好友！";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "请允许使用您的位置，这样可以发送地理位置信息给好友！";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "请允许访问您的相册，这样可以保存照片到相册，也可以发送图片消息！";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "请允许访问您的相册，这样可以保存照片到相册，也可以发送图片消息！";
@@ -970,6 +981,7 @@
 				INFOPLIST_FILE = RCSDemo/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "请允许访问您的相机，这样可以拍摄视频或者照片发给好友，还可以与好友视频通话！";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "请允许使用您的位置，这样可以发送地理位置信息给好友！";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "请允许使用您的位置，这样可以发送地理位置信息给好友！";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "请允许使用您的位置，这样可以发送地理位置信息给好友！";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "请允许访问您的相册，这样可以保存照片到相册，也可以发送图片消息！";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "请允许访问您的相册，这样可以保存照片到相册，也可以发送图片消息！";

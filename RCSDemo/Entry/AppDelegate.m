@@ -10,6 +10,7 @@
 #define AppKey @"pvxdm17jpw9ur"
 
 #import <UserNotifications/UserNotifications.h>
+#import "RCCoreClient+keepalive.h"
 
 @interface AppDelegate () <RCIMUserInfoDataSource, RCIMReceiveMessageDelegate>
 
@@ -33,9 +34,14 @@
     
     [RCIM.sharedRCIM setReceiveMessageDelegate:self];
     
+    RCCoreClient.sharedCoreClient.forceKeepAlive = YES;
+    
     return YES;
 }
 
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    
+}
 
 #pragma mark - UISceneSession lifecycle
 
