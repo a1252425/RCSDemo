@@ -10,7 +10,8 @@ target 'RCSDemo' do
   # Rong Cloud
 #  pod 'RongCloudOpenSource/IMKit', '5.3.4'
 #  pod 'RongCloudOpenSource/IMKit'#, :path => '~/workspace/ios-ui-sdk-set'
-  pod 'RongCloudIM/IMKit', '5.4.0'
+  pod 'RongCloudIM/IMKit', '5.1.3'
+  pod 'RongCloudRTCOpenSource/RongCallKit'
 #  pod 'RongCloudIM/IMKit'#, :configurations => ['Debug']
 
   # Common
