@@ -1,20 +1,24 @@
-#source "git@github.com:a1252425/SSSpec.git"
-#source "https://github.com/CocoaPods/Specs.git"
 platform :ios, '11.0'
 
 target 'RCSDemo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+  inhibit_all_warnings!
   
   # Pods for RCSDemo
-#  pod 'RongCloudIM/IMKit'#, :configurations => ['Debug']
-#  pod 'RongCloudOpenSource/IMKit', '5.1.9'#, :configurations => ['Debug']
-  pod 'RongCloudOpenSource/IMKit'#, :path => '~/workspace/ios-ui-sdk-set'
   
-#  pod 'RongCloudIM/IMKit', '5.1.9'
-#  pod 'Masonry'
+  # Rong Cloud
+#  pod 'RongCloudOpenSource/IMKit', '5.3.4'
+#  pod 'RongCloudOpenSource/IMKit'#, :path => '~/workspace/ios-ui-sdk-set'
+  pod 'RongCloudIM/IMKit', '5.4.0'
+#  pod 'RongCloudIM/IMKit'#, :configurations => ['Debug']
 
-#  pod 'RCSCheapCopyIM/IMKit'
+  # Common
+  pod 'Masonry'
+  pod 'Aspects'
+  
+  # Other
+#  pod 'AgoraAudio_iOS'
   
   target 'RCSDemoTests' do
     inherit! :search_paths

@@ -1,34 +1,40 @@
 PODS:
-  - RongCloudIM/ChatRoom (5.3.5):
+  - Aspects (1.4.1)
+  - Masonry (1.1.0)
+  - RongCloudIM/ChatRoom (5.4.0):
     - RongCloudIM/IMLibCore
-  - RongCloudIM/CustomerService (5.3.5):
+  - RongCloudIM/CustomerService (5.4.0):
     - RongCloudIM/IMLibCore
-  - RongCloudIM/Discussion (5.3.5):
+  - RongCloudIM/Discussion (5.4.0):
     - RongCloudIM/IMLibCore
-  - RongCloudIM/IMLib (5.3.5):
+  - RongCloudIM/IMKit (5.4.0):
+    - RongCloudIM/IMLib
+  - RongCloudIM/IMLib (5.4.0):
     - RongCloudIM/ChatRoom
     - RongCloudIM/CustomerService
     - RongCloudIM/Discussion
     - RongCloudIM/IMLibCore
     - RongCloudIM/PublicService
-  - RongCloudIM/IMLibCore (5.3.5)
-  - RongCloudIM/PublicService (5.3.5):
+  - RongCloudIM/IMLibCore (5.4.0)
+  - RongCloudIM/PublicService (5.4.0):
     - RongCloudIM/IMLibCore
-  - RongCloudOpenSource/IMKit (5.3.5):
-    - RongCloudIM/IMLib (= 5.3.5)
 
 DEPENDENCIES:
-  - RongCloudOpenSource/IMKit
+  - Aspects
+  - Masonry
+  - RongCloudIM/IMKit (= 5.4.0)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
+    - Aspects
+    - Masonry
     - RongCloudIM
-    - RongCloudOpenSource
 
 SPEC CHECKSUMS:
-  RongCloudIM: 2a51aa17aef5f008fcd634414872dac91ba3a7fa
-  RongCloudOpenSource: 7209ab3d9f13c5b6a291a9ff3e62cb9f5249c70e
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  RongCloudIM: 1a91c2ed573a0fdbc610e3d97d33076f0500b017
 
-PODFILE CHECKSUM: e3c71ddef9e411c701f7680af77f17a312600d7a
+PODFILE CHECKSUM: 63d574df04cb057f0362a7faee1e6b1e01f14081
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0

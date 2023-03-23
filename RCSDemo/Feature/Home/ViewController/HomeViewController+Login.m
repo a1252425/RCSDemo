@@ -11,6 +11,24 @@
 
 @implementation HomeViewController (Login)
 
++ (void)load {
+    static dispatch_once_t token;
+    dispatch_once(&token, ^{
+        void(^block)(id<AspectInfo>) = ^(id<AspectInfo> info){
+            NSLog(@"did hook view did load");
+            [(HomeViewController *)info.instance showUserIfNeeded];
+        };
+        NSError *error;
+        [HomeViewController aspect_hookSelector:@selector(viewDidLoad)
+                                    withOptions:AspectPositionAfter
+                                     usingBlock:block
+                                          error:&error];
+        if (error) {
+            NSLog(@"Hook view did load failed %@", error.localizedDescription);
+        }
+    });
+}
+
 - (void)showUserIfNeeded {
     NSString *token = [[NSUserDefaults standardUserDefaults] stringForKey:@"IM_Token"];
     if (token) { return [self connectIMWithToken:token]; }
@@ -46,7 +64,6 @@
     [self presentViewController:controller animated:YES completion:nil];
 }
 
-//6tBEPnmhjykj6rTwC/8zmXcPgOFlZmX4JLwIfj5ax2NahcPun35yWw==@ou8b.cn.rongnav.com;ou8b.cn.rongcfg.com
 - (void)connectIMWithToken:(NSString *)token {
     [RCIM.sharedRCIM connectWithToken:token dbOpened:^(RCDBErrorCode code) {
     } success:^(NSString *userId) {
@@ -56,6 +73,7 @@
         NSLog(@"connect error: %d", (int)errorCode);
     }];
 }
+
 
 - (void)didConnect:(NSString *)userId {
     // TODO

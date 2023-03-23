@@ -11,6 +11,8 @@
 
 #import "HomeViewController+Login.h"
 
+#import <objc/runtime.h>
+
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
@@ -24,15 +26,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self showUserIfNeeded];
-    });
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
 }
 
 #pragma mark - UITableViewDataSource -

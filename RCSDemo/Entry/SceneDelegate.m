@@ -8,11 +8,14 @@
 #import "SceneDelegate.h"
 #import <AVFoundation/AVFoundation.h>
 
+#import "BBStack.h"
+
 @interface SceneDelegate (){
     BOOL _shouldStopBg;
 }
 
 @property (nonatomic, strong) AVAudioPlayer * audioPlayer;
+@property (nonatomic, assign) UIBackgroundTaskIdentifier backgroundTaskIdentifier;
 
 @end
 
@@ -49,6 +52,9 @@
 - (void)sceneWillEnterForeground:(UIScene *)scene {
     // Called as the scene transitions from the background to the foreground.
     // Use this method to undo the changes made on entering the background.
+    [[UIApplication sharedApplication] endBackgroundTask:self.backgroundTaskIdentifier];
+    self.backgroundTaskIdentifier = UIBackgroundTaskInvalid;
+    _shouldStopBg = YES;
 }
 
 
@@ -56,34 +62,40 @@
     // Called as the scene transitions from the foreground to the background.
     // Use this method to save data, release shared resources, and store enough scene-specific state information
     // to restore the scene back to its current state.
-    UIBackgroundTaskIdentifier bgTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil];
-    _shouldStopBg = NO;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(){
-        while ( TRUE ) {
-            if ( _shouldStopBg ){ break; }
-            float remainTime = [[UIApplication sharedApplication] backgroundTimeRemaining];
-            NSLog(@"###!!!BackgroundTimeRemaining: %f",remainTime);
-            if ( remainTime < 20.0 ){
-                NSLog(@"start play audio!");
-                NSError *audioSessionError = nil;
-                AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-                if ( [audioSession setCategory:AVAudioSessionCategoryPlayback withOptions:AVAudioSessionCategoryOptionMixWithOthers error:&(audioSessionError)] )
-                {
-                    NSLog(@"set audio session success!");
-                }else{
-                    NSLog(@"set audio session fail!");
-                }
-                NSURL *musicUrl = [[NSURL alloc]initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"poke" ofType:@"mp3"]];
-                self.audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:musicUrl error:nil];
-                self.audioPlayer.numberOfLoops = 0;
-                self.audioPlayer.volume = 0;
-                [self.audioPlayer play];
-                [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil];
-            }
-            [NSThread sleepForTimeInterval:1.0];
-        }
-    });
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(){
+//        [self keepAliveInBackground];
+//    });
+    
+//    BSLOG_ALL
 }
 
+- (void)keepAliveInBackground {
+    _shouldStopBg = NO;
+    while ( TRUE ) {
+        if ( _shouldStopBg ){ break; }
+        float remainTime = [[UIApplication sharedApplication] backgroundTimeRemaining];
+        NSLog(@"###!!!BackgroundTimeRemaining: %f",remainTime);
+        if ( remainTime < 20.0 ){
+            NSLog(@"start play audio!");
+            NSError *audioSessionError = nil;
+            AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+            if ( [audioSession setCategory:AVAudioSessionCategoryPlayback withOptions:AVAudioSessionCategoryOptionMixWithOthers error:&(audioSessionError)] )
+            {
+                NSLog(@"set audio session success!");
+            }else{
+                NSLog(@"set audio session fail!");
+            }
+            NSURL *musicUrl = [[NSURL alloc]initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"poke" ofType:@"mp3"]];
+            self.audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:musicUrl error:nil];
+            self.audioPlayer.numberOfLoops = 0;
+            self.audioPlayer.volume = 0;
+            [self.audioPlayer play];
+            self.backgroundTaskIdentifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+                NSLog(@"beginBackgroundTaskWithExpirationHandler");
+            }];
+        }
+        [NSThread sleepForTimeInterval:1.0];
+    }
+}
 
 @end

@@ -10,14 +10,15 @@
 #define AppKey @"pvxdm17jpw9ur"
 
 #import <UserNotifications/UserNotifications.h>
-#import "RCCoreClient+keepalive.h"
 
-@interface AppDelegate () <RCIMUserInfoDataSource, RCIMReceiveMessageDelegate>
+@interface AppDelegate () <RCIMUserInfoDataSource, RCIMReceiveMessageDelegate, RCIMConnectionStatusDelegate>
+{
+    NSInteger _connectTime;
+}
 
 @end
 
 @implementation AppDelegate
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -30,17 +31,29 @@
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
         [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError * _Nullable error) {
         }];
+        
+        [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+            switch (settings.authorizationStatus) {
+                case UNAuthorizationStatusAuthorized:
+                    break;
+                default:
+                    break;
+            }
+        }];
     }
     
     [RCIM.sharedRCIM setReceiveMessageDelegate:self];
-    
-    RCCoreClient.sharedCoreClient.forceKeepAlive = YES;
+    [RCIM.sharedRCIM setConnectionStatusDelegate:self];
     
     return YES;
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application {
+    NSLog(@"applicationWillTerminate");
 }
 
 #pragma mark - UISceneSession lifecycle
@@ -69,6 +82,42 @@
 
 - (void)onRCIMReceiveMessage:(RCMessage *)message left:(int)left {
     NSLog(@"onRCIMReceiveMessage");
+}
+
+#pragma mark - RCIMConnectionStatusDelegate -
+
+- (void)onRCIMConnectionStatusChanged:(RCConnectionStatus)status {
+    switch (status) {
+        case ConnectionStatus_Connecting:
+            _connectTime += 1;
+            break;
+        case ConnectionStatus_Connected:
+            NSLog(@"IM status did connected");
+            break;
+            
+        case ConnectionStatus_Suspend:
+            NSLog(@"IM status did suspend");
+            break;
+            
+        case ConnectionStatus_Unconnected:
+            NSLog(@"IM status did unconnected");
+            break;
+            
+        case ConnectionStatus_SignOut:
+            NSLog(@"IM status did sign out");
+            break;
+            
+        default:
+            NSLog(@"IM status did changed: %@", @(status));
+            break;
+    }
+    
+    if (_connectTime >= 1) {
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            SEL selector = NSSelectorFromString(@"terminateWithSuccess");
+//            [[UIApplication sharedApplication] performSelector:selector];
+//        });
+    }
 }
 
 @end

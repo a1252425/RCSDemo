@@ -23,6 +23,15 @@
         [self activeTestAction];
         [self sendFirstMessage];
     });
+    
+    [[RCCoreClient sharedCoreClient] searchConversations:@[@(ConversationType_PRIVATE), @(ConversationType_GROUP)] messageType:@[@"RC:TxtMsg"] keyword:@"1" completion:^(NSArray<RCSearchConversationResult *> * _Nullable results) {
+        NSLog(@"%@", results);
+        RCConversation *conversation = [results firstObject].conversation;
+        if (!conversation) return;
+        [[RCCoreClient sharedCoreClient] getLatestMessages:conversation.conversationType targetId:conversation.targetId count:2 completion:^(NSArray<RCMessage *> * _Nullable messages) {
+            NSLog(@"%@", messages);
+        }];
+    }];
 }
 
 - (void)onSelectedTableRow:(RCConversationModelType)conversationModelType conversationModel:(RCConversationModel *)model atIndexPath:(NSIndexPath *)indexPath {

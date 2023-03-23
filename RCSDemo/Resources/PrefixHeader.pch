@@ -19,6 +19,16 @@
 #import <RCSCheapCopyIM/RongIMKit.h>
 #endif
 
+#if __has_include(<AgoraRtcKit/AgoraRtcKit.h>)
+#import <AgoraRtcKit/AgoraRtcKit.h>
+#define ENABLE_RTC 1
+#else
+#define ENABLE_RTC 0
+#endif
+
+#import <Aspects/Aspects.h>
+#import <Masonry/Masonry.h>
+
 #import "RCMessage+Easy.h"
 #import "RCCoreClient+Easy.h"
 

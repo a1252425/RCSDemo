@@ -7,6 +7,33 @@
 
 #import "RCSChatViewController.h"
 
+@interface RCSTMPShared : NSObject
+
+@property (nonatomic, strong) NSURLSession *session;
+
++ (instancetype)shared;
+
+@end
+
+@implementation RCSTMPShared
+
++ (instancetype)shared {
+    static RCSTMPShared *instance;
+    static dispatch_once_t token;
+    dispatch_once(&token, ^{
+        instance = [RCSTMPShared new];
+    });
+    return instance;
+}
+
+- (NSURLSession *)session {
+    if (_session) return _session;
+    _session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    return _session;
+}
+
+@end
+
 @interface RCSChatViewController ()
 
 @end
@@ -25,6 +52,10 @@
     if (complexCell) { [self registerClass:complexCell forMessageClass:[RCTextMessage class]]; }
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+}
+
 - (void)addOtherPluginBoard {
     if (self.conversationType != ConversationType_APPSERVICE &&
         self.conversationType != ConversationType_PUBLICSERVICE) {
@@ -41,23 +72,9 @@
 - (void)didSendMessageModel:(NSInteger)status model:(RCMessageModel *)messageModel {
     NSLog(@"did send message uid: %@, sentTime %@", messageModel.messageUId, @(messageModel.sentTime));
 }
-//
-//- (RCMessageContent *)willSendMessage:(RCMessageContent *)messageContent {
-//    if ([messageContent isKindOfClass:[RCImageMessage class]]) {
-//        [[RCCoreClient sharedCoreClient] sendMediaMessage:self.conversationType targetId:self.targetId content:messageContent pushContent:nil pushData:nil attached:^(RCMessage * _Nullable message) {
-//            
-//        } progress:^(int progress, long messageId) {
-//            
-//        } success:^(long messageId) {
-//            
-//        } error:^(RCErrorCode errorCode, long messageId) {
-//            
-//        } cancel:^(long messageId) {
-//            
-//        }];
-//        return nil;
-//    }
-//    return messageContent;
-//}
+
+- (void)dealloc {
+    NSLog(@"dealloc");
+}
 
 @end
