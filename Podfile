@@ -8,15 +8,19 @@ target 'RCSDemo' do
   # Pods for RCSDemo
   
   # Rong Cloud
-#  pod 'RongCloudOpenSource/IMKit', '5.3.4'
-#  pod 'RongCloudOpenSource/IMKit'#, :path => '~/workspace/ios-ui-sdk-set'
-  pod 'RongCloudIM/IMKit', '5.1.3'
-  pod 'RongCloudRTCOpenSource/RongCallKit'
-#  pod 'RongCloudIM/IMKit'#, :configurations => ['Debug']
+#  pod 'RongCloudIM/IMKit', '5.4.1'
+  pod 'RongCloudOpenSource/IMKit'#, '5.4.1'
+#  pod 'RongCloudOpenSource/Sight'
+#  pod 'RongCloudOpenSource/RongSticker'
+#  pod 'RongCloudOpenSource/ContactCard'
+#  pod 'RongCloudOpenSource/IFly'
+#  pod 'RongCloudOpenSource/LocationKit'
+#  pod 'RongCloudRTCOpenSource/RongCallKit', '5.4.0'
 
   # Common
   pod 'Masonry'
   pod 'Aspects'
+  pod 'WCDB'
   
   # Other
 #  pod 'AgoraAudio_iOS'

@@ -76,7 +76,6 @@
 
 
 - (void)didConnect:(NSString *)userId {
-    // TODO
 }
 
 @end

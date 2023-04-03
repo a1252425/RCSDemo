@@ -54,6 +54,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    [self.chatSessionInputBarControl.pluginBoardView removeAllItems];
 }
 
 - (void)addOtherPluginBoard {

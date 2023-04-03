@@ -91,6 +91,7 @@
 		C906332D2984C1110080DBAD /* RCMessage+Easy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCMessage+Easy.m"; sourceTree = "<group>"; };
 		C90633302984F4430080DBAD /* RCCoreClient+Easy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCCoreClient+Easy.h"; sourceTree = "<group>"; };
 		C90633312984F4430080DBAD /* RCCoreClient+Easy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCCoreClient+Easy.m"; sourceTree = "<group>"; };
+		C90E269A29CDB8E000327AFC /* RCSDemoDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RCSDemoDebug.entitlements; sourceTree = "<group>"; };
 		C91E4ACC29B60504006ACCDC /* poke.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = poke.mp3; sourceTree = "<group>"; };
 		C92FFBDC295AA22500776DF2 /* TestsPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestsPrefix.pch; sourceTree = "<group>"; };
 		C92FFBDE295AA2A300776DF2 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
@@ -212,6 +213,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C9051F2529DA74C900943589 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		C906332B2984C0E90080DBAD /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +316,7 @@
 		C99DA82D296BF45200F774ED /* User */ = {
 			isa = PBXGroup;
 			children = (
+				C9051F2529DA74C900943589 /* Manager */,
 				C99DA82E296BF45800F774ED /* Model */,
 			);
 			path = User;
@@ -425,6 +434,7 @@
 		C9F6F3CC2959A999009FAAE6 /* RCSDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C90E269A29CDB8E000327AFC /* RCSDemoDebug.entitlements */,
 				C9BB37DA2976B447006C3890 /* Base */,
 				C99DA82F296BF46C00F774ED /* Entry */,
 				C99DA828296BF42000F774ED /* Feature */,
@@ -955,6 +965,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = RCSDemo/RCSDemoDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -981,7 +992,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cn.rongcloud.RCSDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.rongcloud.ss.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

@@ -7,8 +7,6 @@ PODS:
     - RongCloudIM/IMLibCore
   - RongCloudIM/Discussion (5.4.0):
     - RongCloudIM/IMLibCore
-  - RongCloudIM/IMKit (5.4.0):
-    - RongCloudIM/IMLib
   - RongCloudIM/IMLib (5.4.0):
     - RongCloudIM/ChatRoom
     - RongCloudIM/CustomerService
@@ -18,23 +16,40 @@ PODS:
   - RongCloudIM/IMLibCore (5.4.0)
   - RongCloudIM/PublicService (5.4.0):
     - RongCloudIM/IMLibCore
+  - RongCloudOpenSource/IMKit (5.4.0):
+    - RongCloudIM/IMLib (= 5.4.0)
+  - SQLiteRepairKit (1.3.0):
+    - WCDBOptimizedSQLCipher (~> 1.3.0)
+  - WCDB (1.1.0):
+    - SQLiteRepairKit (~> 1.3.0)
+    - WCDBOptimizedSQLCipher (~> 1.3.0)
+  - WCDBOptimizedSQLCipher (1.3.0)
 
 DEPENDENCIES:
   - Aspects
   - Masonry
-  - RongCloudIM/IMKit (= 5.4.0)
+  - RongCloudOpenSource/IMKit
+  - WCDB
 
 SPEC REPOS:
   trunk:
     - Aspects
     - Masonry
     - RongCloudIM
+    - RongCloudOpenSource
+    - SQLiteRepairKit
+    - WCDB
+    - WCDBOptimizedSQLCipher
 
 SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   RongCloudIM: 1a91c2ed573a0fdbc610e3d97d33076f0500b017
+  RongCloudOpenSource: c27713b21544812d667e4611634a69d70a713943
+  SQLiteRepairKit: a66145aadae91886c800f75e16f5cc6476af1a93
+  WCDB: 3767097e36d1cf3179620368593ccc585278fbc1
+  WCDBOptimizedSQLCipher: fc5d49fe6761e54aad29e88da01b6fc1283e5759
 
-PODFILE CHECKSUM: 63d574df04cb057f0362a7faee1e6b1e01f14081
+PODFILE CHECKSUM: dc2ea3afb68f684d332e540e8382c925a945d8ba
 
 COCOAPODS: 1.12.0

@@ -30,14 +30,10 @@
     if (@available(iOS 10.0, *)) {
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
         [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError * _Nullable error) {
-        }];
-        
-        [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
-            switch (settings.authorizationStatus) {
-                case UNAuthorizationStatusAuthorized:
-                    break;
-                default:
-                    break;
+            if (granted) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [application registerForRemoteNotifications];
+                });
             }
         }];
     }
@@ -48,8 +44,12 @@
     return YES;
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    [[RCCoreClient sharedCoreClient] setDeviceTokenData:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    NSLog(@"didFailToRegisterForRemoteNotificationsWithError %@", error.localizedDescription);
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
