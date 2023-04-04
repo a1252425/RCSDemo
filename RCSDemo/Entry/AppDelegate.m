@@ -10,8 +10,9 @@
 #define AppKey @"pvxdm17jpw9ur"
 
 #import <UserNotifications/UserNotifications.h>
+#import <GTSDK/GeTuiSdk.h>
 
-@interface AppDelegate () <RCIMUserInfoDataSource, RCIMReceiveMessageDelegate, RCIMConnectionStatusDelegate>
+@interface AppDelegate () <RCIMUserInfoDataSource, RCIMReceiveMessageDelegate, RCIMConnectionStatusDelegate, GeTuiSdkDelegate>
 {
     NSInteger _connectTime;
 }
@@ -40,6 +41,9 @@
     
     [RCIM.sharedRCIM setReceiveMessageDelegate:self];
     [RCIM.sharedRCIM setConnectionStatusDelegate:self];
+    
+    [GeTuiSdk startSdkWithAppId:@"xvsRqYAQ2N6LijmzdwDVS7" appKey:@"8D4Jm97XPY5gnNHRO0o373" appSecret:@"ddrB1PR69AAxMPjIRMDdK5" delegate:self launchingOptions:launchOptions];
+    [GeTuiSdk registerRemoteNotification: (UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge)];
     
     return YES;
 }
@@ -118,6 +122,41 @@
 //            [[UIApplication sharedApplication] performSelector:selector];
 //        });
     }
+}
+
+#pragma mark - GeTuiSdkDelegate -
+
+- (void)GeTuiSdkNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification completionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
+    completionHandler(UNNotificationPresentationOptionBadge | UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert);
+}
+
+- (void)GeTuiSdkDidReceiveNotification:(NSDictionary *)userInfo notificationCenter:(UNUserNotificationCenter *)center response:(UNNotificationResponse *)response fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    if(completionHandler) {
+        // [ 参考代码，开发者注意根据实际需求自行修改 ] 根据APP需要自行修改参数值
+        completionHandler(UIBackgroundFetchResultNoData);
+    }
+}
+
+- (void)GeTuiSdkDidReceiveSlience:(NSDictionary *)userInfo fromGetui:(BOOL)fromGetui offLine:(BOOL)offLine appId:(NSString *)appId taskId:(NSString *)taskId msgId:(NSString *)msgId fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    if(completionHandler) {
+        // [ 参考代码，开发者注意根据实际需求自行修改 ] 根据APP需要自行修改参数值
+        completionHandler(UIBackgroundFetchResultNoData);
+    }
+}
+
+- (void)GeTuiSdkNotificationCenter:(UNUserNotificationCenter *)center openSettingsForNotification:(UNNotification *)notification {
+    // [ 参考代码，开发者注意根据实际需求自行修改 ] 根据APP需要自行修改参数值
+}
+
+
+- (void)GeTuiSdkDidOccurError:(NSError *)error {
+    NSString *msg = [NSString stringWithFormat:@"[ TestDemo ] [GeTuiSdk GeTuiSdkDidOccurError]:%@\n\n",error.localizedDescription];
+    // SDK发生错误时，回调异常错误信息
+    NSLog(@"%@", msg);
+}
+
+- (void)GeTuiSdkDidRegisterClient:(NSString *)clientId {
+    
 }
 
 @end

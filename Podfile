@@ -20,7 +20,7 @@ target 'RCSDemo' do
   # Common
   pod 'Masonry'
   pod 'Aspects'
-  pod 'WCDB'
+  pod 'GTSDK'
   
   # Other
 #  pod 'AgoraAudio_iOS'
