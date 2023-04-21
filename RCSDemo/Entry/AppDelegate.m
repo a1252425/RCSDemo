@@ -7,6 +7,8 @@
 
 #import "AppDelegate.h"
 
+#import "RCCoreClient+keepalive.h"
+
 #define AppKey @"pvxdm17jpw9ur"
 
 #import <UserNotifications/UserNotifications.h>
@@ -27,6 +29,7 @@
     [RCIM.sharedRCIM initWithAppKey:AppKey];
     RCIM.sharedRCIM.userInfoDataSource = self;
     RCCoreClient.sharedCoreClient.logLevel = RC_Log_Level_Debug;
+    RCCoreClient.sharedCoreClient.forceKeepAlive = YES;
     
     if (@available(iOS 10.0, *)) {
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
