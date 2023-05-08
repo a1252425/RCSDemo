@@ -23,10 +23,6 @@
         [self activeTestAction];
         [self sendFirstMessage];
     });
-    
-    [[RCCoreClient sharedCoreClient] insertOutgoingMessage:ConversationType_PRIVATE targetId:@"insert1" sentStatus:SentStatus_SENT content:[RCTextMessage messageWithContent:@"test"] completion:^(RCMessage * _Nullable message) {
-        [self refreshConversationTableViewIfNeeded];
-    }];
 }
 
 - (void)onSelectedTableRow:(RCConversationModelType)conversationModelType conversationModel:(RCConversationModel *)model atIndexPath:(NSIndexPath *)indexPath {

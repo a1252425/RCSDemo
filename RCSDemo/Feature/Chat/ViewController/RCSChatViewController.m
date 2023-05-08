@@ -51,26 +51,8 @@
     Class complexCell = NSClassFromString(@"RCComplexTextMessageCell");
     if (complexCell) { [self registerClass:complexCell forMessageClass:[RCTextMessage class]]; }
     
-//    self.conversationMessageCollectionView.backgroundColor = [UIColor blackColor];
-//    self.chatSessionInputBarControl.layer.backgroundColor = [UIColor blackColor].CGColor;
-//    self.chatSessionInputBarControl.layer.contents = nil;
-    
-    RCTagInfo *tag = [[RCTagInfo alloc] initWithTagInfo:@"tagId" tagName:@"tagName"];
-
-    [[RCCoreClient sharedCoreClient] addTag:tag success:^{
-        RCConversationIdentifier *identifier = [[RCConversationIdentifier alloc] initWithConversationIdentifier:self.conversationType targetId:self.targetId];
-        [[RCCoreClient sharedCoreClient] addConversationsToTag:@"tagId" conversationIdentifiers:@[identifier] success:^{
-            [[RCCoreClient sharedCoreClient] addConversationsToTag:@"tagId" conversationIdentifiers:@[identifier] success:^{
-                NSLog(@"addConversationsToTag");
-            } error:^(RCErrorCode errorCode) {
-                NSLog(@"addConversationsToTag");
-            }];
-        } error:^(RCErrorCode errorCode) {
-            NSLog(@"addConversationsToTag");
-        }];
-    } error:^(RCErrorCode errorCode) {
-        NSLog(@"addTag");
-    }];
+    NSArray *messages = [[RCIMClient sharedRCIMClient] getHistoryMessages:self.conversationType targetId:self.targetId oldestMessageId:0 count:20];
+    NSLog(@"%@", messages);
 }
 
 - (void)chatInputBar:(RCChatSessionInputBarControl *)chatInputBar shouldChangeFrame:(CGRect)frame {
