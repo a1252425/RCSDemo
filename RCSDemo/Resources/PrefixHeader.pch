@@ -30,7 +30,4 @@
 #import <Masonry/Masonry.h>
 //#import <WCDB/WCDB.h>
 
-#import "RCMessage+Easy.h"
-#import "RCCoreClient+Easy.h"
-
 #endif /* PrefixHeader_pch */

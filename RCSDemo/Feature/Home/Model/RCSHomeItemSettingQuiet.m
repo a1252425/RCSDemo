@@ -67,23 +67,9 @@
 }
 
 - (void)enableNotificationQuiet {
-    [[RCCoreClient sharedCoreClient] setNotificationQuietHours:@"10:00:00"
-                                                    spanMins:600
-                                                     success:^{
-        NSLog(@"setNotificationQuietHours success");
-    }
-                                                       error:^(RCErrorCode status) {
-        NSLog(@"setNotificationQuietHours failed %@", @(status));
-    }];
 }
 
 - (void)disableNotificationQuiet {
-    [[RCCoreClient sharedCoreClient] removeNotificationQuietHours:^{
-        NSLog(@"removeNotificationQuietHours success");
-    }
-                                                          error:^(RCErrorCode status) {
-        NSLog(@"removeNotificationQuietHours failed %@", @(status));
-    }];
 }
 
 @end

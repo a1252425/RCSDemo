@@ -65,17 +65,26 @@
 }
 
 - (void)connectIMWithToken:(NSString *)token {
-    [RCIM.sharedRCIM connectWithToken:token dbOpened:^(RCDBErrorCode code) {
-    } success:^(NSString *userId) {
-        NSLog(@"userId:%@", userId);
-        [self didConnect:userId];
-    } error:^(RCConnectErrorCode errorCode) {
-        NSLog(@"connect error: %d", (int)errorCode);
+    token = @"M7bzBc3W5i6WqGBE59qy+hiTRYC1II9M@mwga.dy01-navqa.cn.ronghub.com;mwga.dy02-navqa.cn.ronghub.com";
+    [RCIM.sharedRCIM connectWithToken:token success:^(NSString *userId) {
+        NSLog(@"user id: %@", userId);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self didConnect:userId];
+        });
+    } error:^(RCConnectErrorCode status) {
+        
+    } tokenIncorrect:^{
+        
     }];
 }
 
 
 - (void)didConnect:(NSString *)userId {
+    NSString *message = [NSString stringWithFormat:@"当前用户 ID 为 %@", userId];
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"登录成功" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+    [controller addAction:sure];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 @end

@@ -7,9 +7,7 @@
 
 #import "AppDelegate.h"
 
-#import "RCCoreClient+keepalive.h"
-
-#define AppKey @"pvxdm17jpw9ur"
+#define AppKey @"c9kqb3rdkbb8j"
 
 #import <UserNotifications/UserNotifications.h>
 #import <GTSDK/GeTuiSdk.h>
@@ -26,10 +24,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [[RCIMClient sharedRCIMClient] setServerInfo:@"nav-ucqa.rongcloud.net" fileServer:nil];
     [RCIM.sharedRCIM initWithAppKey:AppKey];
     RCIM.sharedRCIM.userInfoDataSource = self;
-    RCCoreClient.sharedCoreClient.logLevel = RC_Log_Level_Debug;
-    RCCoreClient.sharedCoreClient.forceKeepAlive = YES;
     
     if (@available(iOS 10.0, *)) {
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
@@ -45,18 +42,7 @@
     [RCIM.sharedRCIM setReceiveMessageDelegate:self];
     [RCIM.sharedRCIM setConnectionStatusDelegate:self];
     
-    [GeTuiSdk startSdkWithAppId:@"xvsRqYAQ2N6LijmzdwDVS7" appKey:@"8D4Jm97XPY5gnNHRO0o373" appSecret:@"ddrB1PR69AAxMPjIRMDdK5" delegate:self launchingOptions:launchOptions];
-    [GeTuiSdk registerRemoteNotification: (UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge)];
-    
     return YES;
-}
-
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    [[RCCoreClient sharedCoreClient] setDeviceTokenData:deviceToken];
-}
-
-- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
-    NSLog(@"didFailToRegisterForRemoteNotificationsWithError %@", error.localizedDescription);
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -94,37 +80,6 @@
 #pragma mark - RCIMConnectionStatusDelegate -
 
 - (void)onRCIMConnectionStatusChanged:(RCConnectionStatus)status {
-    switch (status) {
-        case ConnectionStatus_Connecting:
-            _connectTime += 1;
-            break;
-        case ConnectionStatus_Connected:
-            NSLog(@"IM status did connected");
-            break;
-            
-        case ConnectionStatus_Suspend:
-            NSLog(@"IM status did suspend");
-            break;
-            
-        case ConnectionStatus_Unconnected:
-            NSLog(@"IM status did unconnected");
-            break;
-            
-        case ConnectionStatus_SignOut:
-            NSLog(@"IM status did sign out");
-            break;
-            
-        default:
-            NSLog(@"IM status did changed: %@", @(status));
-            break;
-    }
-    
-    if (_connectTime >= 1) {
-//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//            SEL selector = NSSelectorFromString(@"terminateWithSuccess");
-//            [[UIApplication sharedApplication] performSelector:selector];
-//        });
-    }
 }
 
 #pragma mark - GeTuiSdkDelegate -
@@ -156,10 +111,6 @@
     NSString *msg = [NSString stringWithFormat:@"[ TestDemo ] [GeTuiSdk GeTuiSdkDidOccurError]:%@\n\n",error.localizedDescription];
     // SDK发生错误时，回调异常错误信息
     NSLog(@"%@", msg);
-}
-
-- (void)GeTuiSdkDidRegisterClient:(NSString *)clientId {
-    
 }
 
 @end

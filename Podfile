@@ -8,8 +8,9 @@ target 'RCSDemo' do
   # Pods for RCSDemo
   
   # Rong Cloud
-#  pod 'RongCloudIM/IMKit', '5.3.3'
-  pod 'RongCloudOpenSource/IMKit', '5.4.2'
+#  pod 'RongCloudIM/IMKit', '2.9.19'
+#  pod 'RongCloudOpenSource/IMKit', '5.4.2'
+#  pod 'RongCloudOpenSource/IMKit', :path => '~/workspace/ios-ui-sdk-set'
 #  pod 'RongCloudOpenSource/Sight'
 #  pod 'RongCloudOpenSource/RongSticker'
 #  pod 'RongCloudOpenSource/ContactCard'

@@ -10,10 +10,10 @@
 		150B3304B43E6D03ACAAFF94 /* Pods_RCSDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7001679518613075ED839AE8 /* Pods_RCSDemoTests.framework */; };
 		A2E32536BA87E337DCCF2C50 /* Pods_RCSDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9071F636CA131DB76EA103BE /* Pods_RCSDemo.framework */; };
 		A5263EFB5CD2AE6B29DDB25E /* Pods_RCSDemo_RCSDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF63249BB1F6965E2E50D135 /* Pods_RCSDemo_RCSDemoUITests.framework */; };
-		C906332E2984C1110080DBAD /* RCMessage+Easy.m in Sources */ = {isa = PBXBuildFile; fileRef = C906332D2984C1110080DBAD /* RCMessage+Easy.m */; };
-		C90633322984F4430080DBAD /* RCCoreClient+Easy.m in Sources */ = {isa = PBXBuildFile; fileRef = C90633312984F4430080DBAD /* RCCoreClient+Easy.m */; };
 		C91E4ACD29B60504006ACCDC /* poke.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C91E4ACC29B60504006ACCDC /* poke.mp3 */; };
 		C92FFBE0295AA2A300776DF2 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = C92FFBDF295AA2A300776DF2 /* Dog.m */; };
+		C9519FB72A0A5416009DAE5E /* RongIMLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9519FA52A0A53D4009DAE5E /* RongIMLib.framework */; };
+		C9519FBA2A0A5419009DAE5E /* RongIMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9519FAF2A0A53E5009DAE5E /* RongIMKit.framework */; };
 		C9619C3029CBEDC3008DC21F /* BBStack.m in Sources */ = {isa = PBXBuildFile; fileRef = C9619C2F29CBEDC3008DC21F /* BBStack.m */; };
 		C9619C3329CBEF2F008DC21F /* RCSHomeItemTerminate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9619C3229CBEF2F008DC21F /* RCSHomeItemTerminate.m */; };
 		C969C46A29C0216B00A4257C /* RCSRTCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C969C46929C0216B00A4257C /* RCSRTCViewController.m */; };
@@ -29,9 +29,7 @@
 		C9BB37D32976AABE006C3890 /* RCSHomeItemChat.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37D22976AABE006C3890 /* RCSHomeItemChat.m */; };
 		C9BB37D62976ABB8006C3890 /* RCSHomeItemChatRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37D52976ABB8006C3890 /* RCSHomeItemChatRoom.m */; };
 		C9BB37D92976B306006C3890 /* HomeViewController+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37D82976B306006C3890 /* HomeViewController+Login.m */; };
-		C9D53EE5296FF22E00E36858 /* RCMessageCell+Mark.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D53EE4296FF22E00E36858 /* RCMessageCell+Mark.m */; };
 		C9ED833229F26C2100C984E1 /* RCSHomeItemPrivateUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ED833129F26C2100C984E1 /* RCSHomeItemPrivateUser.m */; };
-		C9ED833829F29A0F00C984E1 /* RCCoreClient+keepalive.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ED833629F29A0F00C984E1 /* RCCoreClient+keepalive.m */; };
 		C9F6F3CF2959A999009FAAE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F3CE2959A999009FAAE6 /* AppDelegate.m */; };
 		C9F6F3D22959A999009FAAE6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F3D12959A999009FAAE6 /* SceneDelegate.m */; };
 		C9F6F3D52959A999009FAAE6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F3D42959A999009FAAE6 /* HomeViewController.m */; };
@@ -49,6 +47,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C9519FA42A0A53D4009DAE5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9519F9E2A0A53D4009DAE5E /* RongIMLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 512C13F31A39B1FD0007B18F;
+			remoteInfo = RongIMLib;
+		};
+		C9519FA62A0A53D4009DAE5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9519F9E2A0A53D4009DAE5E /* RongIMLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A6B252B01CEC1CDC001181D6;
+			remoteInfo = ClearAll;
+		};
+		C9519FA82A0A53D4009DAE5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9519F9E2A0A53D4009DAE5E /* RongIMLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C94ADA1206CA24700D90BFC;
+			remoteInfo = RongIMLibTests;
+		};
+		C9519FAE2A0A53E5009DAE5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9519FAA2A0A53E5009DAE5E /* RongIMKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5146EC5C1A650C82005C8B39;
+			remoteInfo = RongIMKit;
+		};
 		C9F6F3E62959A99A009FAAE6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C9F6F3C22959A999009FAAE6 /* Project object */;
@@ -65,19 +91,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		C9BB37A029768042006C3890 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		11F4E44834EED1F17D73A1F4 /* Pods-RCSDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-RCSDemoTests/Pods-RCSDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7001679518613075ED839AE8 /* Pods_RCSDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCSDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,15 +100,15 @@
 		AC791E61CF2C394868AA80FC /* Pods-RCSDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSDemoTests.release.xcconfig"; path = "Target Support Files/Pods-RCSDemoTests/Pods-RCSDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		BF63249BB1F6965E2E50D135 /* Pods_RCSDemo_RCSDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCSDemo_RCSDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C9BF08969CCD2830E0470F /* Pods-RCSDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSDemo.debug.xcconfig"; path = "Target Support Files/Pods-RCSDemo/Pods-RCSDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		C906332C2984C1110080DBAD /* RCMessage+Easy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCMessage+Easy.h"; sourceTree = "<group>"; };
-		C906332D2984C1110080DBAD /* RCMessage+Easy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCMessage+Easy.m"; sourceTree = "<group>"; };
-		C90633302984F4430080DBAD /* RCCoreClient+Easy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCCoreClient+Easy.h"; sourceTree = "<group>"; };
-		C90633312984F4430080DBAD /* RCCoreClient+Easy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCCoreClient+Easy.m"; sourceTree = "<group>"; };
+		C90A10CE2A0666280043AD7D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		C90A10D02A0666990043AD7D /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		C90E269A29CDB8E000327AFC /* RCSDemoDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RCSDemoDebug.entitlements; sourceTree = "<group>"; };
 		C91E4ACC29B60504006ACCDC /* poke.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = poke.mp3; sourceTree = "<group>"; };
 		C92FFBDC295AA22500776DF2 /* TestsPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestsPrefix.pch; sourceTree = "<group>"; };
 		C92FFBDE295AA2A300776DF2 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		C92FFBDF295AA2A300776DF2 /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		C9519F9E2A0A53D4009DAE5E /* RongIMLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RongIMLib.xcodeproj; path = "../../ios-workspace/ios/ios-rongimlib/RongIMLib.xcodeproj"; sourceTree = "<group>"; };
+		C9519FAA2A0A53E5009DAE5E /* RongIMKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RongIMKit.xcodeproj; path = "../../ios-workspace/ios/ios-rongimkit/RongIMKit.xcodeproj"; sourceTree = "<group>"; };
 		C9619C2E29CBEDC3008DC21F /* BBStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBStack.h; sourceTree = "<group>"; };
 		C9619C2F29CBEDC3008DC21F /* BBStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBStack.m; sourceTree = "<group>"; };
 		C9619C3129CBEF2F008DC21F /* RCSHomeItemTerminate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSHomeItemTerminate.h; sourceTree = "<group>"; };
@@ -128,12 +141,8 @@
 		C9BB37D72976B306006C3890 /* HomeViewController+Login.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HomeViewController+Login.h"; sourceTree = "<group>"; };
 		C9BB37D82976B306006C3890 /* HomeViewController+Login.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HomeViewController+Login.m"; sourceTree = "<group>"; };
 		C9BB37DB2976B457006C3890 /* RCSProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSProtocol.h; sourceTree = "<group>"; };
-		C9D53EE3296FF22E00E36858 /* RCMessageCell+Mark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCMessageCell+Mark.h"; sourceTree = "<group>"; };
-		C9D53EE4296FF22E00E36858 /* RCMessageCell+Mark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCMessageCell+Mark.m"; sourceTree = "<group>"; };
 		C9ED833029F26C2100C984E1 /* RCSHomeItemPrivateUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSHomeItemPrivateUser.h; sourceTree = "<group>"; };
 		C9ED833129F26C2100C984E1 /* RCSHomeItemPrivateUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSHomeItemPrivateUser.m; sourceTree = "<group>"; };
-		C9ED833629F29A0F00C984E1 /* RCCoreClient+keepalive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCCoreClient+keepalive.m"; sourceTree = "<group>"; };
-		C9ED833729F29A0F00C984E1 /* RCCoreClient+keepalive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCCoreClient+keepalive.h"; sourceTree = "<group>"; };
 		C9F6F3CA2959A999009FAAE6 /* RCSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9F6F3CD2959A999009FAAE6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C9F6F3CE2959A999009FAAE6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -167,7 +176,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9519FB72A0A5416009DAE5E /* RongIMLib.framework in Frameworks */,
 				A2E32536BA87E337DCCF2C50 /* Pods_RCSDemo.framework in Frameworks */,
+				C9519FBA2A0A5419009DAE5E /* RongIMKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +217,8 @@
 		2DF142DC4C4293563707CB2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C90A10D02A0666990043AD7D /* Contacts.framework */,
+				C90A10CE2A0666280043AD7D /* AddressBook.framework */,
 				9071F636CA131DB76EA103BE /* Pods_RCSDemo.framework */,
 				BF63249BB1F6965E2E50D135 /* Pods_RCSDemo_RCSDemoUITests.framework */,
 				7001679518613075ED839AE8 /* Pods_RCSDemoTests.framework */,
@@ -223,10 +236,6 @@
 		C906332B2984C0E90080DBAD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C906332C2984C1110080DBAD /* RCMessage+Easy.h */,
-				C906332D2984C1110080DBAD /* RCMessage+Easy.m */,
-				C90633302984F4430080DBAD /* RCCoreClient+Easy.h */,
-				C90633312984F4430080DBAD /* RCCoreClient+Easy.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -238,6 +247,24 @@
 				C92FFBDF295AA2A300776DF2 /* Dog.m */,
 			);
 			path = Sample;
+			sourceTree = "<group>";
+		};
+		C9519F9F2A0A53D4009DAE5E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9519FA52A0A53D4009DAE5E /* RongIMLib.framework */,
+				C9519FA72A0A53D4009DAE5E /* libClearAll.a */,
+				C9519FA92A0A53D4009DAE5E /* RongIMLibTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9519FAB2A0A53E5009DAE5E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9519FAF2A0A53E5009DAE5E /* RongIMKit.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		C969C46629C0213600A4257C /* Agora */ = {
@@ -340,7 +367,6 @@
 				C9F6F3D12959A999009FAAE6 /* SceneDelegate.m */,
 				C9619C2E29CBEDC3008DC21F /* BBStack.h */,
 				C9619C2F29CBEDC3008DC21F /* BBStack.m */,
-				C9ED833529F29A0F00C984E1 /* RCCoreClient+keepalive */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -402,19 +428,8 @@
 		C9D53EE6296FF23400E36858 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C9D53EE3296FF22E00E36858 /* RCMessageCell+Mark.h */,
-				C9D53EE4296FF22E00E36858 /* RCMessageCell+Mark.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		C9ED833529F29A0F00C984E1 /* RCCoreClient+keepalive */ = {
-			isa = PBXGroup;
-			children = (
-				C9ED833629F29A0F00C984E1 /* RCCoreClient+keepalive.m */,
-				C9ED833729F29A0F00C984E1 /* RCCoreClient+keepalive.h */,
-			);
-			path = "RCCoreClient+keepalive";
 			sourceTree = "<group>";
 		};
 		C9F6F3C12959A999009FAAE6 = {
@@ -442,6 +457,8 @@
 		C9F6F3CC2959A999009FAAE6 /* RCSDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C9519FAA2A0A53E5009DAE5E /* RongIMKit.xcodeproj */,
+				C9519F9E2A0A53D4009DAE5E /* RongIMLib.xcodeproj */,
 				C90E269A29CDB8E000327AFC /* RCSDemoDebug.entitlements */,
 				C9BB37DA2976B447006C3890 /* Base */,
 				C99DA82F296BF46C00F774ED /* Entry */,
@@ -504,8 +521,6 @@
 				C9F6F3C62959A999009FAAE6 /* Sources */,
 				C9F6F3C72959A999009FAAE6 /* Frameworks */,
 				C9F6F3C82959A999009FAAE6 /* Resources */,
-				C9BB37A029768042006C3890 /* Embed Frameworks */,
-				A0588C73922588157F74C558 /* [CP] Copy Pods Resources */,
 				F7F06BAC43513AB5B3DE67E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -544,7 +559,6 @@
 				C9F6F3EB2959A99A009FAAE6 /* Sources */,
 				C9F6F3EC2959A99A009FAAE6 /* Frameworks */,
 				C9F6F3ED2959A99A009FAAE6 /* Resources */,
-				7B2E3AE12407AC2A7EA56CBD /* [CP] Copy Pods Resources */,
 				B1804259BC5EEE7BA714C9DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -593,6 +607,16 @@
 			mainGroup = C9F6F3C12959A999009FAAE6;
 			productRefGroup = C9F6F3CB2959A999009FAAE6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C9519FAB2A0A53E5009DAE5E /* Products */;
+					ProjectRef = C9519FAA2A0A53E5009DAE5E /* RongIMKit.xcodeproj */;
+				},
+				{
+					ProductGroup = C9519F9F2A0A53D4009DAE5E /* Products */;
+					ProjectRef = C9519F9E2A0A53D4009DAE5E /* RongIMLib.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C9F6F3C92959A999009FAAE6 /* RCSDemo */,
@@ -601,6 +625,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C9519FA52A0A53D4009DAE5E /* RongIMLib.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RongIMLib.framework;
+			remoteRef = C9519FA42A0A53D4009DAE5E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C9519FA72A0A53D4009DAE5E /* libClearAll.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libClearAll.a;
+			remoteRef = C9519FA62A0A53D4009DAE5E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C9519FA92A0A53D4009DAE5E /* RongIMLibTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RongIMLibTests.xctest;
+			remoteRef = C9519FA82A0A53D4009DAE5E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C9519FAF2A0A53E5009DAE5E /* RongIMKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RongIMKit.framework;
+			remoteRef = C9519FAE2A0A53E5009DAE5E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C9F6F3C82959A999009FAAE6 /* Resources */ = {
@@ -676,40 +731,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7B2E3AE12407AC2A7EA56CBD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RCSDemo-RCSDemoUITests/Pods-RCSDemo-RCSDemoUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RCSDemo-RCSDemoUITests/Pods-RCSDemo-RCSDemoUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RCSDemo-RCSDemoUITests/Pods-RCSDemo-RCSDemoUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A0588C73922588157F74C558 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RCSDemo/Pods-RCSDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RCSDemo/Pods-RCSDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RCSDemo/Pods-RCSDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B1804259BC5EEE7BA714C9DB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -779,8 +800,6 @@
 				C9F6F40D2959AB03009FAAE6 /* RCSChatViewController.m in Sources */,
 				C9BB37D02976A9DC006C3890 /* RCSHomeItemSettingQuiet.m in Sources */,
 				C9BB37D62976ABB8006C3890 /* RCSHomeItemChatRoom.m in Sources */,
-				C90633322984F4430080DBAD /* RCCoreClient+Easy.m in Sources */,
-				C9D53EE5296FF22E00E36858 /* RCMessageCell+Mark.m in Sources */,
 				C9619C3329CBEF2F008DC21F /* RCSHomeItemTerminate.m in Sources */,
 				C9BB37B529768265006C3890 /* HomeSwitchCell.m in Sources */,
 				C969C46A29C0216B00A4257C /* RCSRTCViewController.m in Sources */,
@@ -789,14 +808,12 @@
 				C9F6F4072959AA35009FAAE6 /* RCSSUser.m in Sources */,
 				C98448AB2991F34B00EC4794 /* RCSConversationViewController+Test.m in Sources */,
 				C969C46D29C0218D00A4257C /* RCSHomeItemRTC.m in Sources */,
-				C906332E2984C1110080DBAD /* RCMessage+Easy.m in Sources */,
 				C9BB37B229768252006C3890 /* HomeNormalCell.m in Sources */,
 				C9BB37BE2976842D006C3890 /* RCSHomeViewModel.m in Sources */,
 				C9BB37D32976AABE006C3890 /* RCSHomeItemChat.m in Sources */,
 				C9F6F3CF2959A999009FAAE6 /* AppDelegate.m in Sources */,
 				C9F6F3E02959A99A009FAAE6 /* main.m in Sources */,
 				C9BB37CA2976A9BD006C3890 /* RCSHomeItemChatPrivate.m in Sources */,
-				C9ED833829F29A0F00C984E1 /* RCCoreClient+keepalive.m in Sources */,
 				C9ED833229F26C2100C984E1 /* RCSHomeItemPrivateUser.m in Sources */,
 				C9F6F3D22959A999009FAAE6 /* SceneDelegate.m in Sources */,
 				C9BB37CD2976A9C9006C3890 /* RCSHomeItemChatGroup.m in Sources */,
@@ -978,6 +995,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9CVMN4UZK4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RCSDemo/RongiFlyKit",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RCSDemo/Resources/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1019,6 +1040,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9CVMN4UZK4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RCSDemo/RongiFlyKit",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RCSDemo/Resources/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
