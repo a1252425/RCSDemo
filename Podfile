@@ -8,8 +8,8 @@ target 'RCSDemo' do
   # Pods for RCSDemo
   
   # Rong Cloud
-#  pod 'RongCloudIM/IMKit', '5.3.3'
-  pod 'RongCloudIM/IMKit', '5.1.9.3'
+  pod 'RongCloudIM/IMKit', '5.3.3'
+#  pod 'RongCloudIM/IMKit', '5.1.9.3'
 #  pod 'RongCloudOpenSource/Sight'
 #  pod 'RongCloudOpenSource/RongSticker'
 #  pod 'RongCloudOpenSource/ContactCard'

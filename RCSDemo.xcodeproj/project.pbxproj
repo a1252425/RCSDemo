@@ -14,6 +14,8 @@
 		C90633322984F4430080DBAD /* RCCoreClient+Easy.m in Sources */ = {isa = PBXBuildFile; fileRef = C90633312984F4430080DBAD /* RCCoreClient+Easy.m */; };
 		C91E4ACD29B60504006ACCDC /* poke.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C91E4ACC29B60504006ACCDC /* poke.mp3 */; };
 		C92FFBE0295AA2A300776DF2 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = C92FFBDF295AA2A300776DF2 /* Dog.m */; };
+		C9519FFB2A0CE461009DAE5E /* RCSDemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9519FFA2A0CE461009DAE5E /* RCSDemoCell.m */; };
+		C9519FFE2A0CE611009DAE5E /* RCSChatViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = C9519FFD2A0CE611009DAE5E /* RCSChatViewController+Test.m */; };
 		C9619C3029CBEDC3008DC21F /* BBStack.m in Sources */ = {isa = PBXBuildFile; fileRef = C9619C2F29CBEDC3008DC21F /* BBStack.m */; };
 		C9619C3329CBEF2F008DC21F /* RCSHomeItemTerminate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9619C3229CBEF2F008DC21F /* RCSHomeItemTerminate.m */; };
 		C969C46A29C0216B00A4257C /* RCSRTCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C969C46929C0216B00A4257C /* RCSRTCViewController.m */; };
@@ -96,6 +98,10 @@
 		C92FFBDC295AA22500776DF2 /* TestsPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestsPrefix.pch; sourceTree = "<group>"; };
 		C92FFBDE295AA2A300776DF2 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		C92FFBDF295AA2A300776DF2 /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		C9519FF92A0CE461009DAE5E /* RCSDemoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSDemoCell.h; sourceTree = "<group>"; };
+		C9519FFA2A0CE461009DAE5E /* RCSDemoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCSDemoCell.m; sourceTree = "<group>"; };
+		C9519FFC2A0CE611009DAE5E /* RCSChatViewController+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCSChatViewController+Test.h"; sourceTree = "<group>"; };
+		C9519FFD2A0CE611009DAE5E /* RCSChatViewController+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCSChatViewController+Test.m"; sourceTree = "<group>"; };
 		C9619C2E29CBEDC3008DC21F /* BBStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBStack.h; sourceTree = "<group>"; };
 		C9619C2F29CBEDC3008DC21F /* BBStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBStack.m; sourceTree = "<group>"; };
 		C9619C3129CBEF2F008DC21F /* RCSHomeItemTerminate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSHomeItemTerminate.h; sourceTree = "<group>"; };
@@ -305,6 +311,8 @@
 			children = (
 				C9F6F40C2959AB03009FAAE6 /* RCSChatViewController.h */,
 				C9F6F4092959AB03009FAAE6 /* RCSChatViewController.m */,
+				C9519FFC2A0CE611009DAE5E /* RCSChatViewController+Test.h */,
+				C9519FFD2A0CE611009DAE5E /* RCSChatViewController+Test.m */,
 				C9F6F40B2959AB03009FAAE6 /* RCSConversationViewController.h */,
 				C9F6F40A2959AB03009FAAE6 /* RCSConversationViewController.m */,
 				C98448A92991F34B00EC4794 /* RCSConversationViewController+Test.h */,
@@ -404,6 +412,8 @@
 			children = (
 				C9D53EE3296FF22E00E36858 /* RCMessageCell+Mark.h */,
 				C9D53EE4296FF22E00E36858 /* RCMessageCell+Mark.m */,
+				C9519FF92A0CE461009DAE5E /* RCSDemoCell.h */,
+				C9519FFA2A0CE461009DAE5E /* RCSDemoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -774,6 +784,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9F6F40E2959AB03009FAAE6 /* RCSConversationViewController.m in Sources */,
+				C9519FFB2A0CE461009DAE5E /* RCSDemoCell.m in Sources */,
 				C9BB37D92976B306006C3890 /* HomeViewController+Login.m in Sources */,
 				C9F6F3D52959A999009FAAE6 /* HomeViewController.m in Sources */,
 				C9F6F40D2959AB03009FAAE6 /* RCSChatViewController.m in Sources */,
@@ -796,6 +807,7 @@
 				C9F6F3CF2959A999009FAAE6 /* AppDelegate.m in Sources */,
 				C9F6F3E02959A99A009FAAE6 /* main.m in Sources */,
 				C9BB37CA2976A9BD006C3890 /* RCSHomeItemChatPrivate.m in Sources */,
+				C9519FFE2A0CE611009DAE5E /* RCSChatViewController+Test.m in Sources */,
 				C9ED833829F29A0F00C984E1 /* RCCoreClient+keepalive.m in Sources */,
 				C9ED833229F26C2100C984E1 /* RCSHomeItemPrivateUser.m in Sources */,
 				C9F6F3D22959A999009FAAE6 /* SceneDelegate.m in Sources */,

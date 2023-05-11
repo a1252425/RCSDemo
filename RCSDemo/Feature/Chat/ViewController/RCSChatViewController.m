@@ -5,7 +5,9 @@
 //  Created by shaoshuai on 2022/12/5.
 //
 
-#import "RCSChatViewController.h"
+#import "RCSChatViewController+Test.h"
+
+#import "RCSDemoCell.h"
 
 @interface RCSTMPShared : NSObject
 
@@ -43,6 +45,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self mViewDidLoad];
     
     [self addOtherPluginBoard];
     
@@ -53,6 +56,16 @@
     
     NSArray *messages = [[RCIMClient sharedRCIMClient] getHistoryMessages:self.conversationType targetId:self.targetId oldestMessageId:0 count:20];
     NSLog(@"%@", messages);
+    
+//    [[RCCoreClient sharedCoreClient] recallMessage:messages.firstObject success:^(long messageId) {
+//
+//    } error:^(RCErrorCode errorcode) {
+//
+//    }];
+    [self registerClass:[RCSDemoCell class] forMessageClass:[RCTextMessage class]];
+}
+
+- (void)mViewDidLoad {
 }
 
 - (void)chatInputBar:(RCChatSessionInputBarControl *)chatInputBar shouldChangeFrame:(CGRect)frame {

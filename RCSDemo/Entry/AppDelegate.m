@@ -14,7 +14,7 @@
 #import <UserNotifications/UserNotifications.h>
 #import <GTSDK/GeTuiSdk.h>
 
-@interface AppDelegate () <RCIMUserInfoDataSource, RCIMReceiveMessageDelegate, RCIMConnectionStatusDelegate, GeTuiSdkDelegate>
+@interface AppDelegate () <RCIMUserInfoDataSource, RCIMReceiveMessageDelegate, RCIMConnectionStatusDelegate, GeTuiSdkDelegate, UNUserNotificationCenterDelegate>
 {
     NSInteger _connectTime;
 }
@@ -26,6 +26,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    UIApplication.sharedApplication.applicationState;
     [RCIM.sharedRCIM initWithAppKey:AppKey];
     RCIM.sharedRCIM.userInfoDataSource = self;
     RCCoreClient.sharedCoreClient.logLevel = RC_Log_Level_Debug;
@@ -40,6 +41,13 @@
                 });
             }
         }];
+        
+        UNNotificationAction *action = [UNNotificationAction actionWithIdentifier:@"replay"
+                                                                            title:@"回复"
+                                                                          options:UNNotificationActionOptionNone];
+        UIUserNotificationCategory *category = [UNNotificationCategory categoryWithIdentifier:@"message" actions:@[action] intentIdentifiers:@[] options:UNNotificationCategoryOptionNone];
+        
+        [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:[NSSet setWithObject:category]];
     }
     
     [RCIM.sharedRCIM setReceiveMessageDelegate:self];
@@ -47,6 +55,10 @@
     
     [GeTuiSdk startSdkWithAppId:@"xvsRqYAQ2N6LijmzdwDVS7" appKey:@"8D4Jm97XPY5gnNHRO0o373" appSecret:@"ddrB1PR69AAxMPjIRMDdK5" delegate:self launchingOptions:launchOptions];
     [GeTuiSdk registerRemoteNotification: (UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge)];
+    
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    
+    [[NSUserDefaults standardUserDefaults] setObject:@(84) forKey:@"DemoCellHeight"];
     
     return YES;
 }
@@ -160,6 +172,21 @@
 
 - (void)GeTuiSdkDidRegisterClient:(NSString *)clientId {
     
+}
+
+#pragma mark - UNUserNotificationCenterDelegate -
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
+    NSLog(@"didReceiveNotificationResponse");
+    NSString *categoryIdentifier = response.notification.request.content.categoryIdentifier;
+    if ([categoryIdentifier isEqualToString:@"message"]) {
+        if ([response.actionIdentifier isEqualToString:@"reply"]) {
+            UNTextInputNotificationResponse *tResponse = (UNTextInputNotificationResponse *)response;
+            NSString *userText = tResponse.userText;
+            NSLog(@"response text %@", userText);
+        }
+    }
+    completionHandler();
 }
 
 @end

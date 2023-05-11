@@ -12,6 +12,7 @@
 - (void)activeTestAction {
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapActionHandler:)];
     gesture.numberOfTapsRequired = 2;
+    gesture.numberOfTouchesRequired = 1;
     [self.navigationController.navigationBar addGestureRecognizer:gesture];
 }
 
