@@ -45,7 +45,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self mViewDidLoad];
+    [self activeActions];
     
     [self addOtherPluginBoard];
     
@@ -53,19 +53,6 @@
     
     Class complexCell = NSClassFromString(@"RCComplexTextMessageCell");
     if (complexCell) { [self registerClass:complexCell forMessageClass:[RCTextMessage class]]; }
-    
-    NSArray *messages = [[RCIMClient sharedRCIMClient] getHistoryMessages:self.conversationType targetId:self.targetId oldestMessageId:0 count:20];
-    NSLog(@"%@", messages);
-    
-//    [[RCCoreClient sharedCoreClient] recallMessage:messages.firstObject success:^(long messageId) {
-//
-//    } error:^(RCErrorCode errorcode) {
-//
-//    }];
-    [self registerClass:[RCSDemoCell class] forMessageClass:[RCTextMessage class]];
-}
-
-- (void)mViewDidLoad {
 }
 
 - (void)chatInputBar:(RCChatSessionInputBarControl *)chatInputBar shouldChangeFrame:(CGRect)frame {
@@ -83,6 +70,17 @@
                             atIndex:3
                                 tag:PLUGIN_BOARD_ITEM_FILE_TAG];
     }
+}
+
+- (RCMessageContent *)willSendMessage:(RCMessageContent *)messageContent {
+    RCMessage *message = [[RCMessage alloc] initWithType:self.conversationType targetId:self.targetId direction:MessageDirection_SEND content:messageContent];
+    message.messagePushConfig.iOSConfig.category = @"message";
+    [[RCIM sharedRCIM] sendMessage:message pushContent:nil pushData:nil successBlock:^(RCMessage *successMessage) {
+        
+    } errorBlock:^(RCErrorCode nErrorCode, RCMessage *errorMessage) {
+        
+    }];
+    return nil;
 }
 
 - (void)didSendMessageModel:(NSInteger)status model:(RCMessageModel *)messageModel {

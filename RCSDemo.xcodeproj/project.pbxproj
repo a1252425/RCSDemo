@@ -20,7 +20,7 @@
 		C9619C3329CBEF2F008DC21F /* RCSHomeItemTerminate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9619C3229CBEF2F008DC21F /* RCSHomeItemTerminate.m */; };
 		C969C46A29C0216B00A4257C /* RCSRTCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C969C46929C0216B00A4257C /* RCSRTCViewController.m */; };
 		C969C46D29C0218D00A4257C /* RCSHomeItemRTC.m in Sources */ = {isa = PBXBuildFile; fileRef = C969C46C29C0218D00A4257C /* RCSHomeItemRTC.m */; };
-		C98448AB2991F34B00EC4794 /* RCSConversationViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = C98448AA2991F34B00EC4794 /* RCSConversationViewController+Test.m */; };
+		C98448AB2991F34B00EC4794 /* RCSChatsViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = C98448AA2991F34B00EC4794 /* RCSChatsViewController+Test.m */; };
 		C9BB37B229768252006C3890 /* HomeNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37B129768252006C3890 /* HomeNormalCell.m */; };
 		C9BB37B529768265006C3890 /* HomeSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37B429768265006C3890 /* HomeSwitchCell.m */; };
 		C9BB37BB29768398006C3890 /* RCSHomeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB37BA29768398006C3890 /* RCSHomeItem.m */; };
@@ -47,7 +47,7 @@
 		C9F6F4072959AA35009FAAE6 /* RCSSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F4042959AA35009FAAE6 /* RCSSUser.m */; };
 		C9F6F4082959AA35009FAAE6 /* Users.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9F6F4062959AA35009FAAE6 /* Users.plist */; };
 		C9F6F40D2959AB03009FAAE6 /* RCSChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F4092959AB03009FAAE6 /* RCSChatViewController.m */; };
-		C9F6F40E2959AB03009FAAE6 /* RCSConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F40A2959AB03009FAAE6 /* RCSConversationViewController.m */; };
+		C9F6F40E2959AB03009FAAE6 /* RCSChatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F6F40A2959AB03009FAAE6 /* RCSChatsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,8 +110,8 @@
 		C969C46929C0216B00A4257C /* RCSRTCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCSRTCViewController.m; sourceTree = "<group>"; };
 		C969C46B29C0218D00A4257C /* RCSHomeItemRTC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSHomeItemRTC.h; sourceTree = "<group>"; };
 		C969C46C29C0218D00A4257C /* RCSHomeItemRTC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCSHomeItemRTC.m; sourceTree = "<group>"; };
-		C98448A92991F34B00EC4794 /* RCSConversationViewController+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCSConversationViewController+Test.h"; sourceTree = "<group>"; };
-		C98448AA2991F34B00EC4794 /* RCSConversationViewController+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCSConversationViewController+Test.m"; sourceTree = "<group>"; };
+		C98448A92991F34B00EC4794 /* RCSChatsViewController+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCSChatsViewController+Test.h"; sourceTree = "<group>"; };
+		C98448AA2991F34B00EC4794 /* RCSChatsViewController+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCSChatsViewController+Test.m"; sourceTree = "<group>"; };
 		C9BB37B029768252006C3890 /* HomeNormalCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeNormalCell.h; sourceTree = "<group>"; };
 		C9BB37B129768252006C3890 /* HomeNormalCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeNormalCell.m; sourceTree = "<group>"; };
 		C9BB37B329768265006C3890 /* HomeSwitchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeSwitchCell.h; sourceTree = "<group>"; };
@@ -162,8 +162,8 @@
 		C9F6F4042959AA35009FAAE6 /* RCSSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSSUser.m; sourceTree = "<group>"; };
 		C9F6F4062959AA35009FAAE6 /* Users.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Users.plist; sourceTree = "<group>"; };
 		C9F6F4092959AB03009FAAE6 /* RCSChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSChatViewController.m; sourceTree = "<group>"; };
-		C9F6F40A2959AB03009FAAE6 /* RCSConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSConversationViewController.m; sourceTree = "<group>"; };
-		C9F6F40B2959AB03009FAAE6 /* RCSConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSConversationViewController.h; sourceTree = "<group>"; };
+		C9F6F40A2959AB03009FAAE6 /* RCSChatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSChatsViewController.m; sourceTree = "<group>"; };
+		C9F6F40B2959AB03009FAAE6 /* RCSChatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSChatsViewController.h; sourceTree = "<group>"; };
 		C9F6F40C2959AB03009FAAE6 /* RCSChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSChatViewController.h; sourceTree = "<group>"; };
 		CDB3582CE661A95566E753DF /* Pods-RCSDemo-RCSDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSDemo-RCSDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-RCSDemo-RCSDemoUITests/Pods-RCSDemo-RCSDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -313,10 +313,10 @@
 				C9F6F4092959AB03009FAAE6 /* RCSChatViewController.m */,
 				C9519FFC2A0CE611009DAE5E /* RCSChatViewController+Test.h */,
 				C9519FFD2A0CE611009DAE5E /* RCSChatViewController+Test.m */,
-				C9F6F40B2959AB03009FAAE6 /* RCSConversationViewController.h */,
-				C9F6F40A2959AB03009FAAE6 /* RCSConversationViewController.m */,
-				C98448A92991F34B00EC4794 /* RCSConversationViewController+Test.h */,
-				C98448AA2991F34B00EC4794 /* RCSConversationViewController+Test.m */,
+				C9F6F40B2959AB03009FAAE6 /* RCSChatsViewController.h */,
+				C9F6F40A2959AB03009FAAE6 /* RCSChatsViewController.m */,
+				C98448A92991F34B00EC4794 /* RCSChatsViewController+Test.h */,
+				C98448AA2991F34B00EC4794 /* RCSChatsViewController+Test.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -783,7 +783,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9F6F40E2959AB03009FAAE6 /* RCSConversationViewController.m in Sources */,
+				C9F6F40E2959AB03009FAAE6 /* RCSChatsViewController.m in Sources */,
 				C9519FFB2A0CE461009DAE5E /* RCSDemoCell.m in Sources */,
 				C9BB37D92976B306006C3890 /* HomeViewController+Login.m in Sources */,
 				C9F6F3D52959A999009FAAE6 /* HomeViewController.m in Sources */,
@@ -798,7 +798,7 @@
 				C9619C3029CBEDC3008DC21F /* BBStack.m in Sources */,
 				C9BB37BB29768398006C3890 /* RCSHomeItem.m in Sources */,
 				C9F6F4072959AA35009FAAE6 /* RCSSUser.m in Sources */,
-				C98448AB2991F34B00EC4794 /* RCSConversationViewController+Test.m in Sources */,
+				C98448AB2991F34B00EC4794 /* RCSChatsViewController+Test.m in Sources */,
 				C969C46D29C0218D00A4257C /* RCSHomeItemRTC.m in Sources */,
 				C906332E2984C1110080DBAD /* RCMessage+Easy.m in Sources */,
 				C9BB37B229768252006C3890 /* HomeNormalCell.m in Sources */,

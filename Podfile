@@ -8,7 +8,7 @@ target 'RCSDemo' do
   # Pods for RCSDemo
   
   # Rong Cloud
-  pod 'RongCloudOpenSource/IMKit', '5.2.4'
+  pod 'RongCloudOpenSource/IMKit', '5.4.2'
 #  pod 'RongCloudIM/IMKit', '5.1.9.3'
 #  pod 'RongCloudOpenSource/Sight'
 #  pod 'RongCloudOpenSource/RongSticker'
@@ -20,7 +20,6 @@ target 'RCSDemo' do
   # Common
   pod 'Masonry'
   pod 'Aspects'
-  pod 'GTSDK'
   
   # Other
 #  pod 'AgoraAudio_iOS'

@@ -1,5 +1,5 @@
 //
-//  TMPListViewController.h
+//  RCSChatsViewController.h
 //  TestFramework
 //
 //  Created by shaoshuai on 2022/12/8.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RCSConversationViewController : RCConversationListViewController
+@interface RCSChatsViewController : RCConversationListViewController
 
 @end
 

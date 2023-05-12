@@ -5,19 +5,14 @@
 //  Created by shuai shao on 2022/12/26.
 //
 
-#import "AppDelegate.h"
+#import <UserNotifications/UserNotifications.h>
 
+#import "AppDelegate.h"
 #import "RCCoreClient+keepalive.h"
 
 #define AppKey @"pvxdm17jpw9ur"
 
-#import <UserNotifications/UserNotifications.h>
-#import <GTSDK/GeTuiSdk.h>
-
-@interface AppDelegate () <RCIMUserInfoDataSource, RCIMReceiveMessageDelegate, RCIMConnectionStatusDelegate, GeTuiSdkDelegate, UNUserNotificationCenterDelegate>
-{
-    NSInteger _connectTime;
-}
+@interface AppDelegate () <RCIMUserInfoDataSource, RCIMReceiveMessageDelegate, RCIMConnectionStatusDelegate, UNUserNotificationCenterDelegate>
 
 @end
 
@@ -26,7 +21,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    UIApplication.sharedApplication.applicationState;
     [RCIM.sharedRCIM initWithAppKey:AppKey];
     RCIM.sharedRCIM.userInfoDataSource = self;
     RCCoreClient.sharedCoreClient.logLevel = RC_Log_Level_Debug;
@@ -36,27 +30,17 @@
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
         [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError * _Nullable error) {
             if (granted) {
+                [self addNotificationCategory];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [application registerForRemoteNotifications];
                 });
             }
         }];
-        
-        UNNotificationAction *action = [UNNotificationAction actionWithIdentifier:@"replay"
-                                                                            title:@"回复"
-                                                                          options:UNNotificationActionOptionNone];
-        UIUserNotificationCategory *category = [UNNotificationCategory categoryWithIdentifier:@"message" actions:@[action] intentIdentifiers:@[] options:UNNotificationCategoryOptionNone];
-        
-        [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:[NSSet setWithObject:category]];
+        center.delegate = self;
     }
     
     [RCIM.sharedRCIM setReceiveMessageDelegate:self];
     [RCIM.sharedRCIM setConnectionStatusDelegate:self];
-    
-    [GeTuiSdk startSdkWithAppId:@"xvsRqYAQ2N6LijmzdwDVS7" appKey:@"8D4Jm97XPY5gnNHRO0o373" appSecret:@"ddrB1PR69AAxMPjIRMDdK5" delegate:self launchingOptions:launchOptions];
-    [GeTuiSdk registerRemoteNotification: (UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge)];
-    
-    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     
     [[NSUserDefaults standardUserDefaults] setObject:@(84) forKey:@"DemoCellHeight"];
     
@@ -76,7 +60,6 @@
 }
 
 #pragma mark - UISceneSession lifecycle
-
 
 - (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options {
     // Called when a new scene session is being created.
@@ -108,7 +91,6 @@
 - (void)onRCIMConnectionStatusChanged:(RCConnectionStatus)status {
     switch (status) {
         case ConnectionStatus_Connecting:
-            _connectTime += 1;
             break;
         case ConnectionStatus_Connected:
             NSLog(@"IM status did connected");
@@ -130,63 +112,81 @@
             NSLog(@"IM status did changed: %@", @(status));
             break;
     }
-    
-    if (_connectTime >= 1) {
-//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//            SEL selector = NSSelectorFromString(@"terminateWithSuccess");
-//            [[UIApplication sharedApplication] performSelector:selector];
-//        });
-    }
 }
 
-#pragma mark - GeTuiSdkDelegate -
-
-- (void)GeTuiSdkNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification completionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
-    completionHandler(UNNotificationPresentationOptionBadge | UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert);
-}
-
-- (void)GeTuiSdkDidReceiveNotification:(NSDictionary *)userInfo notificationCenter:(UNUserNotificationCenter *)center response:(UNNotificationResponse *)response fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-    if(completionHandler) {
-        // [ 参考代码，开发者注意根据实际需求自行修改 ] 根据APP需要自行修改参数值
-        completionHandler(UIBackgroundFetchResultNoData);
-    }
-}
-
-- (void)GeTuiSdkDidReceiveSlience:(NSDictionary *)userInfo fromGetui:(BOOL)fromGetui offLine:(BOOL)offLine appId:(NSString *)appId taskId:(NSString *)taskId msgId:(NSString *)msgId fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-    if(completionHandler) {
-        // [ 参考代码，开发者注意根据实际需求自行修改 ] 根据APP需要自行修改参数值
-        completionHandler(UIBackgroundFetchResultNoData);
-    }
-}
-
-- (void)GeTuiSdkNotificationCenter:(UNUserNotificationCenter *)center openSettingsForNotification:(UNNotification *)notification {
-    // [ 参考代码，开发者注意根据实际需求自行修改 ] 根据APP需要自行修改参数值
-}
-
-
-- (void)GeTuiSdkDidOccurError:(NSError *)error {
-    NSString *msg = [NSString stringWithFormat:@"[ TestDemo ] [GeTuiSdk GeTuiSdkDidOccurError]:%@\n\n",error.localizedDescription];
-    // SDK发生错误时，回调异常错误信息
-    NSLog(@"%@", msg);
-}
-
-- (void)GeTuiSdkDidRegisterClient:(NSString *)clientId {
-    
+- (void)addNotificationCategory {
+    UNNotificationAction *ignoreAction = [UNNotificationAction actionWithIdentifier:@"ignore"
+                                                                              title:@"忽略"
+                                                                            options:UNNotificationActionOptionNone];
+    UNNotificationAction *replayAction = [UNTextInputNotificationAction actionWithIdentifier:@"reply"
+                                                                                       title:@"回复"
+                                                                                     options:UNNotificationActionOptionNone
+                                                                        textInputButtonTitle:@"发送"
+                                                                        textInputPlaceholder:@"请输入回复信息"];
+    UNNotificationCategory *category = [UNNotificationCategory categoryWithIdentifier:@"message"
+                                                                              actions:@[ignoreAction, replayAction]
+                                                                    intentIdentifiers:@[]
+                                                                              options:UNNotificationCategoryOptionNone];
+    [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:[NSSet setWithObject:category]];
 }
 
 #pragma mark - UNUserNotificationCenterDelegate -
 
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
+    if (@available(iOS 14.0, *)) {
+        completionHandler(UNNotificationPresentationOptionList|UNNotificationPresentationOptionBanner);
+    } else {
+        completionHandler(UNNotificationPresentationOptionBadge|UNNotificationPresentationOptionSound|UNNotificationPresentationOptionAlert);
+    }
+}
+
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
-    NSLog(@"didReceiveNotificationResponse");
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     NSString *categoryIdentifier = response.notification.request.content.categoryIdentifier;
+    UNNotificationContent *content = response.notification.request.content;
     if ([categoryIdentifier isEqualToString:@"message"]) {
         if ([response.actionIdentifier isEqualToString:@"reply"]) {
+            NSDictionary *userInfo = content.userInfo;
+            NSString *userId = [self getUserIdFromRemotePushInfo:userInfo];
+            
             UNTextInputNotificationResponse *tResponse = (UNTextInputNotificationResponse *)response;
             NSString *userText = tResponse.userText;
-            NSLog(@"response text %@", userText);
+            
+            [self replyMessage:userId content:userText completion:^(BOOL success) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completionHandler();
+                });
+            }];
+            return;
         }
     }
     completionHandler();
+}
+
+// https://doc.rongcloud.cn/im/IOS/5.X/noui/push/apns#pushData
+- (nullable NSString *)getUserIdFromRemotePushInfo:(NSDictionary *)info {
+    NSDictionary *rc = info[@"rc"];
+    if (![rc isKindOfClass:[NSDictionary class]]) return nil;
+    NSString *userId = rc[@"tId"];
+    if (![userId isKindOfClass:[NSString class]]) return nil;
+    return userId;
+}
+
+- (void)replyMessage:(NSString *)userId content:(NSString *)content completion:(void(^)(BOOL))completion {
+    NSString *token = [[NSUserDefaults standardUserDefaults] stringForKey:@"IM_Token"];
+    if (!token.length || !userId || !content) return !completion?:completion(NO);
+    [RCIM.sharedRCIM initWithAppKey:AppKey option:nil];
+    [[RCIM sharedRCIM] connectWithToken:token dbOpened:^(RCDBErrorCode code) {
+    } success:^(NSString *userId) {
+        RCTextMessage *message = [RCTextMessage messageWithContent:content];
+        [[RCIM sharedRCIM] sendMessage:ConversationType_PRIVATE targetId:userId content:message pushContent:nil pushData:nil success:^(long messageId) {
+            !completion?:completion(YES);
+        } error:^(RCErrorCode nErrorCode, long messageId) {
+            !completion?:completion(NO);
+        }];
+    } error:^(RCConnectErrorCode errorCode) {
+        !completion?:completion(NO);
+    }];
 }
 
 @end

@@ -9,25 +9,12 @@
 
 @implementation RCSChatViewController (Test)
 
-+ (void)load {
-    static dispatch_once_t token;
-    dispatch_once(&token, ^{
-        void(^block)(id<AspectInfo>) = ^(id<AspectInfo> info){
-            NSLog(@"did hook view did load");
-            [(RCSChatViewController *)info.instance activeTestAction];
-        };
-        NSError *error;
-        [RCSChatViewController aspect_hookSelector:@selector(mViewDidLoad)
-                                    withOptions:AspectPositionAfter
-                                     usingBlock:block
-                                          error:&error];
-        if (error) {
-            NSLog(@"Hook view did load failed %@", error.localizedDescription);
-        }
-    });
+- (void)activeActions {
+    [self addGesture];
 }
 
-- (void)activeTestAction {
+- (void)addGesture {
+    // 需要配合 RCDemoCell 使用 registerCell
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapActionHandler:)];
     gesture.numberOfTapsRequired = 2;
     [self.navigationController.navigationBar addGestureRecognizer:gesture];

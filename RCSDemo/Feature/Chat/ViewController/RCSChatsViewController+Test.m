@@ -1,15 +1,20 @@
 //
-//  RCSConversationViewController+Test.m
+//  RCSChatsViewController+Test.m
 //  RCSDemo
 //
 //  Created by shuai shao on 2023/2/7.
 //
 
-#import "RCSConversationViewController+Test.h"
+#import "RCSChatsViewController+Test.h"
 
-@implementation RCSConversationViewController (Test)
+@implementation RCSChatsViewController (Test)
 
-- (void)activeTestAction {
+- (void)activeActions {
+    [self addGesture];
+    [self sendFirstMessage];
+}
+
+- (void)addGesture {
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapActionHandler:)];
     gesture.numberOfTapsRequired = 2;
     [self.navigationController.navigationBar addGestureRecognizer:gesture];

@@ -1,28 +1,25 @@
 //
-//  TMPListViewController.m
+//  RCSChatsViewController.m
 //  TestFramework
 //
 //  Created by shaoshuai on 2022/12/8.
 //
 
-#import "RCSConversationViewController+Test.h"
+#import "RCSChatsViewController+Test.h"
 
 #import "RCSChatViewController.h"
 
-@interface RCSConversationViewController ()
+@interface RCSChatsViewController ()
 
 @end
 
-@implementation RCSConversationViewController
+@implementation RCSChatsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self activeTestAction];
-        [self sendFirstMessage];
-    });
+    [self activeActions];
 }
 
 - (void)onSelectedTableRow:(RCConversationModelType)conversationModelType conversationModel:(RCConversationModel *)model atIndexPath:(NSIndexPath *)indexPath {

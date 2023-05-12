@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RCSChatViewController (Test)
 
+- (void)activeActions;
+
 @end
 
 NS_ASSUME_NONNULL_END
