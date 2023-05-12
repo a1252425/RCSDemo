@@ -172,14 +172,14 @@
     return userId;
 }
 
-- (void)replyMessage:(NSString *)userId content:(NSString *)content completion:(void(^)(BOOL))completion {
+- (void)replyMessage:(NSString *)toUserId content:(NSString *)content completion:(void(^)(BOOL))completion {
     NSString *token = [[NSUserDefaults standardUserDefaults] stringForKey:@"IM_Token"];
-    if (!token.length || !userId || !content) return !completion?:completion(NO);
+    if (!token.length || !toUserId || !content) return !completion?:completion(NO);
     [RCIM.sharedRCIM initWithAppKey:AppKey option:nil];
     [[RCIM sharedRCIM] connectWithToken:token dbOpened:^(RCDBErrorCode code) {
     } success:^(NSString *userId) {
         RCTextMessage *message = [RCTextMessage messageWithContent:content];
-        [[RCIM sharedRCIM] sendMessage:ConversationType_PRIVATE targetId:userId content:message pushContent:nil pushData:nil success:^(long messageId) {
+        [[RCIM sharedRCIM] sendMessage:ConversationType_PRIVATE targetId:toUserId content:message pushContent:nil pushData:nil success:^(long messageId) {
             !completion?:completion(YES);
         } error:^(RCErrorCode nErrorCode, long messageId) {
             !completion?:completion(NO);
