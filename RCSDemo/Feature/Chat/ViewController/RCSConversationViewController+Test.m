@@ -12,7 +12,6 @@
 - (void)activeTestAction {
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapActionHandler:)];
     gesture.numberOfTapsRequired = 2;
-    gesture.numberOfTouchesRequired = 1;
     [self.navigationController.navigationBar addGestureRecognizer:gesture];
 }
 
@@ -24,7 +23,7 @@
         NSString *content = controller.textFields.lastObject.text;
         if (userID.length == 0 || content.length == 0) return;
         RCTextMessage *message = [RCTextMessage messageWithContent:content];
-        [[RCIM sharedRCIM] sendMessage:ConversationType_PRIVATE targetId:userID content:message pushContent:nil pushData:nil success:^(long messageId) {
+        [[RCIM sharedRCIM] sendMessage:ConversationType_PRIVATE targetId:userID content:message pushContent:@"test" pushData:nil success:^(long messageId) {
         } error:^(RCErrorCode nErrorCode, long messageId) {
         }];
     }];

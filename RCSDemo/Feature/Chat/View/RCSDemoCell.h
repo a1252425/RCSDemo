@@ -5,7 +5,7 @@
 //  Created by shuai shao on 2023/5/11.
 //
 
-#import <RongIMKit/RongIMKit.h>
+#import <RongCloudOpenSource/RongIMKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

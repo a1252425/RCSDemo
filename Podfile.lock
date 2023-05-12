@@ -3,30 +3,33 @@ PODS:
   - GTSDK (2.7.4.0):
     - ZXSDK
   - Masonry (1.1.0)
-  - RongCloudIM/ChatRoom (5.3.3):
+  - RongCloudIM/ChatRoom (5.2.4):
     - RongCloudIM/IMLibCore
-  - RongCloudIM/CustomerService (5.3.3):
+  - RongCloudIM/CustomerService (5.2.4):
     - RongCloudIM/IMLibCore
-  - RongCloudIM/Discussion (5.3.3):
+  - RongCloudIM/Discussion (5.2.4):
     - RongCloudIM/IMLibCore
-  - RongCloudIM/IMKit (5.3.3):
-    - RongCloudIM/IMLib
-  - RongCloudIM/IMLib (5.3.3):
+  - RongCloudIM/IMLib (5.2.4):
     - RongCloudIM/ChatRoom
     - RongCloudIM/CustomerService
     - RongCloudIM/Discussion
     - RongCloudIM/IMLibCore
+    - RongCloudIM/Location
     - RongCloudIM/PublicService
-  - RongCloudIM/IMLibCore (5.3.3)
-  - RongCloudIM/PublicService (5.3.3):
+  - RongCloudIM/IMLibCore (5.2.4)
+  - RongCloudIM/Location (5.2.4):
     - RongCloudIM/IMLibCore
+  - RongCloudIM/PublicService (5.2.4):
+    - RongCloudIM/IMLibCore
+  - RongCloudOpenSource/IMKit (5.2.4):
+    - RongCloudIM/IMLib (= 5.2.4)
   - ZXSDK (3.2.3)
 
 DEPENDENCIES:
   - Aspects
   - GTSDK
   - Masonry
-  - RongCloudIM/IMKit (= 5.3.3)
+  - RongCloudOpenSource/IMKit (= 5.2.4)
 
 SPEC REPOS:
   trunk:
@@ -34,15 +37,17 @@ SPEC REPOS:
     - GTSDK
     - Masonry
     - RongCloudIM
+    - RongCloudOpenSource
     - ZXSDK
 
 SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   GTSDK: f28e6d575e8a1c26e331ce29b0ecac7db39679cc
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  RongCloudIM: 95460ee48df05aed723902c0a433a726cd7dd8c6
+  RongCloudIM: 09269332ab90c9a8d966f38b25410c8d2629eee6
+  RongCloudOpenSource: eaafe743b1b7b848b2e306560330d3a4af065a82
   ZXSDK: 3ae8f7f2c5d45b4c1def43e14d930495c5f4d424
 
-PODFILE CHECKSUM: 5010e5745ec4f044779ace72491502de8c0ca6e7
+PODFILE CHECKSUM: b610c5716a348540b24ad97784304f5863e0d3b0
 
 COCOAPODS: 1.12.1
