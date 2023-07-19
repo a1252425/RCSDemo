@@ -7,6 +7,8 @@
 
 #import <UserNotifications/UserNotifications.h>
 
+#import <dlfcn.h>
+
 #import "AppDelegate.h"
 #import "RCCoreClient+keepalive.h"
 
@@ -23,7 +25,7 @@
     
     [RCIM.sharedRCIM initWithAppKey:AppKey];
     RCIM.sharedRCIM.userInfoDataSource = self;
-    RCCoreClient.sharedCoreClient.logLevel = RC_Log_Level_Debug;
+    RCCoreClient.sharedCoreClient.logLevel = RC_Log_Level_None;
     RCCoreClient.sharedCoreClient.forceKeepAlive = YES;
     
     if (@available(iOS 10.0, *)) {
@@ -175,7 +177,7 @@
 - (void)replyMessage:(NSString *)toUserId content:(NSString *)content completion:(void(^)(BOOL))completion {
     NSString *token = [[NSUserDefaults standardUserDefaults] stringForKey:@"IM_Token"];
     if (!token.length || !toUserId || !content) return !completion?:completion(NO);
-    [RCIM.sharedRCIM initWithAppKey:AppKey option:nil];
+    [RCIM.sharedRCIM initWithAppKey:AppKey];
     [[RCIM sharedRCIM] connectWithToken:token dbOpened:^(RCDBErrorCode code) {
     } success:^(NSString *userId) {
         RCTextMessage *message = [RCTextMessage messageWithContent:content];
@@ -187,6 +189,27 @@
     } error:^(RCConnectErrorCode errorCode) {
         !completion?:completion(NO);
     }];
+}
+
+void __sanitizer_cov_trace_pc_guard_init(uint32_t *start, uint32_t *stop) {
+    static uint32_t N;    // Counter for the guards.
+    if (start == stop || *start) return;  // Initialize only once.
+    printf("INIT: %p %p\n", start, stop);
+    // ++进行的指针运算
+    for (uint32_t *x = start; x < stop; x++)
+        *x = ++N;   // Guards should start from 1.
+}
+
+void __sanitizer_cov_trace_pc_guard(uint32_t *guard) {
+    if (!*guard) return;  // Duplicate the guard check.
+    
+    // 被插入标记的函数的地址
+    void *PC = __builtin_return_address(0);
+    
+    Dl_info info;
+    dladdr(PC, &info);
+    printf("fname:%s\nfbase:%p\nsname:%s\nsaddr:%p\n\n\n\n",info.dli_fname,info.dli_fbase,info.dli_sname,info.dli_saddr);
+    
 }
 
 @end

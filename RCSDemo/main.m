@@ -16,6 +16,3 @@ int main(int argc, char * argv[]) {
     }
     return UIApplicationMain(argc, argv, nil, appDelegateClassName);
 }
-
-//C7JJ-KV4R-VI64-M1P5
-//C7JJ-KV8Q-7JU4-M1P5

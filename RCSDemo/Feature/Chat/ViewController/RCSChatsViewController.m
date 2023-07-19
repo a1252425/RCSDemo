@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self activeActions];
+//    [self activeActions];
 }
 
 - (void)onSelectedTableRow:(RCConversationModelType)conversationModelType conversationModel:(RCConversationModel *)model atIndexPath:(NSIndexPath *)indexPath {
@@ -38,5 +38,18 @@
         RCLogI(@"navigationController is nil , Please Rewrite `onSelectedTableRow:conversationModel:atIndexPath:` method to implement the conversation cell click to push RCConversationViewController vc");
     }
 }
+
+//- (NSMutableArray<RCConversationModel *> *)willReloadTableData:(NSMutableArray<RCConversationModel *> *)dataSource {
+//    for (int i = 0; i < 10; i++) {
+//        RCConversation *conversation = [[RCConversation alloc] init];
+//        conversation.conversationType = ConversationType_PRIVATE;
+//        conversation.targetId = [NSString stringWithFormat:@"test_%@", @(i)];
+//        conversation.sentTime = [[NSDate date] timeIntervalSince1970] * 1000;
+//        conversation.blockStatus = NOTIFY;
+//        RCConversationModel *model = [[RCConversationModel alloc] initWithConversation:conversation extend:nil];
+//        [dataSource addObject:model];
+//    }
+//    return dataSource;
+//}
 
 @end

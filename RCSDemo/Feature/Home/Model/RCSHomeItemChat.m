@@ -34,7 +34,7 @@
 - (void)performActionWithSender:(nullable id)sender {
     if (![sender isKindOfClass:[UIViewController class]]) return;
     UIViewController *controller = (UIViewController *)sender;
-    NSArray *types = @[@(ConversationType_PRIVATE), @(ConversationType_GROUP), @(ConversationType_CHATROOM)];
+    NSArray *types = @[@(ConversationType_PRIVATE), @(ConversationType_GROUP), @(ConversationType_CHATROOM), @(ConversationType_SYSTEM)];
     RCSChatsViewController *list = [[RCSChatsViewController alloc] initWithDisplayConversationTypes:types collectionConversationType:@[]];
     [controller.navigationController pushViewController:list animated:YES];
     dispatch_async(dispatch_get_main_queue(), ^{ list.title = [self title]; });

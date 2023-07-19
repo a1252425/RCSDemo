@@ -49,10 +49,13 @@
     
     [self addOtherPluginBoard];
     
+//    self.needDeleteRemoteMessage = YES;
+    
     RCKitConfigCenter.message.enableSendCombineMessage = YES;
     
     Class complexCell = NSClassFromString(@"RCComplexTextMessageCell");
     if (complexCell) { [self registerClass:complexCell forMessageClass:[RCTextMessage class]]; }
+    [self registerClass:[RCSDemoCell class] forMessageClass:[RCTextMessage class]];
 }
 
 - (void)chatInputBar:(RCChatSessionInputBarControl *)chatInputBar shouldChangeFrame:(CGRect)frame {
@@ -72,19 +75,40 @@
     }
 }
 
-- (RCMessageContent *)willSendMessage:(RCMessageContent *)messageContent {
-    RCMessage *message = [[RCMessage alloc] initWithType:self.conversationType targetId:self.targetId direction:MessageDirection_SEND content:messageContent];
-    message.messagePushConfig.iOSConfig.category = @"message";
-    [[RCIM sharedRCIM] sendMessage:message pushContent:nil pushData:nil successBlock:^(RCMessage *successMessage) {
-        
-    } errorBlock:^(RCErrorCode nErrorCode, RCMessage *errorMessage) {
-        
-    }];
-    return nil;
-}
-
 - (void)didSendMessageModel:(NSInteger)status model:(RCMessageModel *)messageModel {
     NSLog(@"did send message uid: %@, sentTime %@", messageModel.messageUId, @(messageModel.sentTime));
+}
+
+//- (RCMessageContent *)willSendMessage:(RCMessageContent *)messageContent {
+//    RCMessage *message = [[RCMessage alloc] initWithType:self.conversationType targetId:self.targetId direction:MessageDirection_SEND content:messageContent];
+//    message.canIncludeExpansion = YES;
+//    message.expansionDic = @{@"k": @"v"};
+//    [[RCIM sharedRCIM] sendMessage:message pushContent:nil pushData:nil successBlock:^(RCMessage *successMessage) {
+//        
+//    } errorBlock:^(RCErrorCode nErrorCode, RCMessage *errorMessage) {
+//        
+//    }];
+//    return nil;
+//}
+
+- (void)didTapMessageCell:(RCMessageModel *)model {
+    [super didTapMessageCell:model];
+    if (![model.content isKindOfClass:[RCTextMessage class]]) return;
+    [RCSDemoCell updateCellHeight];
+    NSInteger index = [self.conversationDataRepository indexOfObject:model];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:0];
+    UICollectionViewCell *cell = [self.conversationMessageCollectionView cellForItemAtIndexPath:indexPath];
+    if ([cell isKindOfClass:[RCSDemoCell class]]) {
+        [(RCSDemoCell *)cell setDataModel:model];
+    }
+}
+
+- (void)onBeginRecordEvent {
+    NSLog(@"onBeginRecordEvent");
+}
+
+- (void)onEndRecordEvent {
+    NSLog(@"onEndRecordEvent");
 }
 
 - (void)dealloc {

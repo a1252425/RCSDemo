@@ -9,6 +9,24 @@
 
 @implementation RCSChatsViewController (Test)
 
++ (void)load {
+    static dispatch_once_t token;
+    dispatch_once(&token, ^{
+        void(^block)(id<AspectInfo>) = ^(id<AspectInfo> info){
+            NSLog(@"did hook view did load");
+            [(RCSChatsViewController *)info.instance activeActions];
+        };
+        NSError *error;
+        [RCSChatsViewController aspect_hookSelector:@selector(viewDidLoad)
+                                    withOptions:AspectPositionAfter
+                                     usingBlock:block
+                                          error:&error];
+        if (error) {
+            NSLog(@"Hook view did load failed %@", error.localizedDescription);
+        }
+    });
+}
+
 - (void)activeActions {
     [self addGesture];
     [self sendFirstMessage];
