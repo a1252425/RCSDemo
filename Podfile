@@ -8,20 +8,21 @@ target 'RCSDemo' do
   # Pods for RCSDemo
   
   # Rong Cloud
-  pod 'RongCloudIM/IMKit', '5.3.7'
+  pod 'RongCloudOpenSource/IMKit', '5.6.1'
 #  pod 'RongCloudOpenSource/IMKit', '5.1.9.4'
+#  pod 'RongCloudOpenSource/IMKit', '5.0.0'
 #  pod 'RongCloudOpenSource/Sight'
 #  pod 'RongCloudOpenSource/RongSticker', '5.4.7'
 #  pod 'RongCloudOpenSource/ContactCard'
 #  pod 'RongCloudOpenSource/IFly'
 #  pod 'RongCloudOpenSource/LocationKit'
-#  pod 'RongCloudRTCOpenSource/RongCallKit', '5.4.0'
+#  pod 'RongCloudOpenSource/RongCallKit'
+#  pod 'RongCloudOpenSource/IMKit', :path=>'~/workspace/ios-ui-sdk-set'
+
 
   # Common
   pod 'Masonry'
   pod 'Aspects'
-  pod 'BlockHook'
-#  pod 'FBRetainCycleDetector'
   pod 'AFNetworking'
   
   # Other

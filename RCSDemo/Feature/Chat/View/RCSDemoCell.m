@@ -7,6 +7,10 @@
 
 #import "RCSDemoCell.h"
 
+@interface RCSDemoCell () <UITableViewDelegate, UITableViewDataSource>
+
+@end
+
 @implementation RCSDemoCell
 
 + (void)updateCellHeight {
@@ -40,6 +44,7 @@
 - (void)setDataModel:(RCMessageModel *)model {
     [super setDataModel:model];
     [self setAutoLayout];
+    [self.tableView reloadData];
 }
 
 - (void)setAutoLayout {
@@ -49,6 +54,47 @@
     } else {
         self.backgroundColor = [UIColor redColor];
     }
+}
+
+#pragma mark - UITableViewDataSource -
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.items.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    cell.textLabel.text = self.items[indexPath.item];
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate -
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 54;
+}
+
+#pragma mark - Property -
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:self.contentView.bounds];
+        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+        [self.contentView addSubview:_tableView];
+    }
+    return _tableView;
+}
+
+- (NSMutableArray *)items {
+    if (!_items) {
+        _items = [NSMutableArray array];
+        [_items addObjectsFromArray:@[
+            @"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",
+        ]];
+    }
+    return _items;
 }
 
 @end

@@ -11,6 +11,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RCSDemoCell : RCMessageCell
 
+@property (nonatomic, strong) UITableView *tableView;
+
+@property (nonatomic, copy) NSMutableArray *items;
+
 + (void)updateCellHeight;
 
 @end

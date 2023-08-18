@@ -16,6 +16,11 @@
     dispatch_once(&token, ^{
         void(^block)(id<AspectInfo>) = ^(id<AspectInfo> info){
             NSLog(@"did hook view did load");
+            HomeViewController *controller = (HomeViewController *)info.instance;
+            [[NSNotificationCenter defaultCenter] addObserver:controller
+                                                     selector:@selector(showUserIfNeeded)
+                                                         name:@"IM_Logout"
+                                                       object:nil];
             [(HomeViewController *)info.instance showUserIfNeeded];
         };
         NSError *error;
@@ -26,30 +31,7 @@
         if (error) {
             NSLog(@"Hook view did load failed %@", error.localizedDescription);
         }
-        [self exchangeMethod];
     });
-}
-
-+ (void)exchangeMethod {
-    NSString *signature = @"connectWithToken:timeLimit:dbOpened:success:error:";
-    SEL selector = NSSelectorFromString(signature);
-    void(^block)(id<AspectInfo>) = ^(id<AspectInfo> info){
-        void(^block)(NSString *) = info.arguments[3];
-        NSLog(@"method invoked %@", signature);
-        if ([signature isEqualToString:@"connectWithToken:timeLimit:dbOpened:success:error:"]) {
-            NSInvocation *invocation = info.originalInvocation;
-            void(^rBlock)(NSString *) = ^(NSString *userId){
-                NSLog(@"method hook userId %@", userId);
-                if (block) block(userId);
-            };
-            [invocation setArgument:&rBlock atIndex:5];
-            [invocation invoke];
-        }
-    };
-    [RCCoreClient aspect_hookSelector:selector
-                          withOptions:AspectPositionInstead
-                           usingBlock:block
-                                error:nil];
 }
 
 - (void)showUserIfNeeded {
